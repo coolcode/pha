@@ -1,5 +1,8 @@
 # PHA
 
+## Env
+JDK 1.8 + Spring MVC Boot
+
 ## IDE
 
 Spring Tool Suit
@@ -10,3 +13,5 @@ Spring Tool Suit
 - load project by using Spring Tool Suit
 - right click project -> Run As ->Spring Boot App
 - browser http://localhost:8080
+
+
