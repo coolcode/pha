@@ -21,9 +21,9 @@ import com.meecat.doctorapp.service.*;
 @RequestMapping("/quiz")
 public class QuizController {
 
-	@GetMapping("/index")
+	@GetMapping("/quiz_user")
 	public String index(Model model) {
-		return "quiz/index";
+		return "quiz/quiz_user";
 	
 	}
 
