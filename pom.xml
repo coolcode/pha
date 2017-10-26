@@ -4,12 +4,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.meecat</groupId>
-	<artifactId>doctorapp</artifactId>
+	<artifactId>pha</artifactId>
 	<version>1.0</version>
 	<packaging>war</packaging>
 
-	<name>doctorapp</name>
-	<description>Doctor Online</description>
+	<name>pha</name>
+	<description>Personal Health Assistant</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>

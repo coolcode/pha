@@ -138,16 +138,16 @@ body {
 }
 
 #loading-bar-spinner .spinner-icon {
-  width: 128px;
-  height: 128px;
+  width: 180px;
+  height: 180px;
   background-image: url("../img/spinner.png");
-  background-color: #178BF7;
-  opacity: 0.5;
+  /*background-color: #178BF7;
+  opacity: 0.5;*/
   
   border:  solid 0px transparent;
   border-top-color:  #29d;
   border-left-color: #29d;
-  border-radius: 50%;
+  border-radius: 90%;
 
   -webkit-animation: loading-bar-spinner 800ms linear infinite;
   -moz-animation:    loading-bar-spinner 800ms linear infinite;
