@@ -1,4 +1,4 @@
-# PHA ![logo.png](http://res.cloudinary.com/yopo/image/upload/c_scale,w_32/v1508994639/doctoronline/logo.png)
+# PHA ![logo.png](http://res.cloudinary.com/yopo/image/upload/c_scale,w_36/v1508994639/doctoronline/logo.png)
 
 ## CI (Travis)
 
