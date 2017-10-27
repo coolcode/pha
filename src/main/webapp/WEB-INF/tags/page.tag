@@ -43,12 +43,13 @@
 				</a>
 			</div>
 	        <div id="navbar" class="navbar-collapse collapse">
-	          <ul class="nav navbar-nav navbar-right">
+	          <ul class="nav navbar-nav navbar-left">
 					<li><a href="${pageContext.request.contextPath}/">Home</a></li>
 					<li><a href="${pageContext.request.contextPath}/forum"> Discussion Board </a></li> 
 					<li><a href="${pageContext.request.contextPath}/chat"> Chat</a></li>
 					<li><a href="${pageContext.request.contextPath}/wiki"> Wiki </a></li>
-					<li><a href="${pageContext.request.contextPath}/quiz/quiz_user"> Quiz </a></li> 
+					<li><a href="${pageContext.request.contextPath}/quiz/quiz_user"> Quiz </a></li>
+					<li><a href="${pageContext.request.contextPath}/TrackHealth/"> TrackHealth </a></li>					 
 					<li><a href="${pageContext.request.contextPath}/announcement">Announcement</a></li>
 					<li><a href="${pageContext.request.contextPath}/medicine">Medicine</a></li>
 					<li><a href="${pageContext.request.contextPath}/user/logout">Logout</a></li>
@@ -77,9 +78,10 @@
 <!-- 			</div> <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main"> -->
 			<div class="col-sm-12 col-md-12 main">
 				<!--  custom content begin================================================== -->
-				<jsp:doBody />
+				
 				<!--  custom content end================================================== -->
 			</div>
+			<jsp:doBody />
 		</div>
 
 	</div>
