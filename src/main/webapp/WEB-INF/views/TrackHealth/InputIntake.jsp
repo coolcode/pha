@@ -7,7 +7,7 @@
     <jsp:attribute name="script">
     </jsp:attribute>
 <jsp:body>
-		<h1 class="text-left">Functionality</h1>
+		<h1 class="text-left">Input Daily Intake</h1>
 					
 		<div class="panel panel-info">
 			<div class="panel-heading">XXX</div> 
