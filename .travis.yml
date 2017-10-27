@@ -7,5 +7,5 @@ deploy:
   provider: azure_web_apps
   username: meerkat       # If AZURE_WA_USERNAME isn't set
   password: Elec5620   # If AZURE_WA_PASSWORD isn't set
-  site: elec5620       # If AZURE_WA_SITE isn't set
-  slot: elec5620      # (optional) If AZURE_WA_SLOT isn't set
+  site: pha5620       # If AZURE_WA_SITE isn't set
+  slot:       # (optional) If AZURE_WA_SLOT isn't set
