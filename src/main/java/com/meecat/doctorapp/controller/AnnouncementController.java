@@ -19,7 +19,7 @@ import com.meecat.doctorapp.service.*;
 
 
 
-//Main controller of the Announcement page and Announcement detail page.
+//Main controller of the Announcement page 
 @Controller
 @Transactional
 @RequestMapping("/announcement")
@@ -40,8 +40,7 @@ public class AnnouncementController {
 		User currentUser = userService.getCurrentUser();
 		model.addAttribute("currentUser", currentUser);	
 		model.addAttribute("ifUserisDoctor", userService.ifUserisDoctor(currentUser.getId()));
-//		Announcement p = new Announcement();
-//		announcementDao.save(p);
+//Announcement detail page.
 		return "announcement";
 	
 	}
@@ -54,15 +53,5 @@ public class AnnouncementController {
 		return "announcementdetail";
 	} 
 	
-//    @RequestMapping(value = "", method = RequestMethod.POST)
-//    public String hibernateAdd(Locale locale, Model model) {
-//    	public String hibernateAdd(HttpServletRequest httpServletRequest)  {  
-//        Announcement p = new Announcement();
-//        p.setTitle("joanne.test");
-//        p.setContent("testing");
-//        p.setCreator(userService.getCurrentUser());
 
-//        announcementService.saveANMT(p);
-//        return "redirect:/announcement";
-////    }
 }
