@@ -7,7 +7,7 @@ after_install:
  - mv target/pha-1.0.war target/ROOT.war
 env:
   global:
-    - "FTP_USER=pha5620\meerkat"
+    - "FTP_USER=pha5620\\meerkat"
     - "FTP_PASSWORD=Elec5620"
 after_success:
     "curl --ftp-create-dirs -T target/ROOT.war -u $FTP_USER:$FTP_PASSWORD ftp://waws-prod-sn1-131.ftp.azurewebsites.windows.net/site/wwwroot/webapps"
