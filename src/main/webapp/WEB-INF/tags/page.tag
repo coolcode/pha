@@ -46,8 +46,8 @@
 	          <ul class="nav navbar-nav navbar-left">
 					<li><a href="${pageContext.request.contextPath}/">Home</a></li>
 					<li><a href="${pageContext.request.contextPath}/forum"> Discussion Board </a></li> 
-					<li><a href="${pageContext.request.contextPath}/chat"> Chat</a></li>
-					<li><a href="${pageContext.request.contextPath}/wiki"> Wiki </a></li>
+<%-- 					<li><a href="${pageContext.request.contextPath}/chat"> Chat</a></li> --%>
+<%-- 					<li><a href="${pageContext.request.contextPath}/wiki"> Wiki </a></li> --%>
 					<li><a href="${pageContext.request.contextPath}/quiz/quiz_user"> Quiz </a></li>
 					<li><a href="${pageContext.request.contextPath}/TrackHealth/"> TrackHealth </a></li>					 
 					<li><a href="${pageContext.request.contextPath}/announcement">Announcement</a></li>

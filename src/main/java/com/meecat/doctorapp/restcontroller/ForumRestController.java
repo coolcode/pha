@@ -60,6 +60,6 @@ public class ForumRestController {
 
 	@GetMapping("/post/top/{n}")
 	public List<Post> getPosts(@PathVariable("n") int n) {
-		return forumService.listPosts(n);
+		return forumService.listPosts(5);
 	}
 }
