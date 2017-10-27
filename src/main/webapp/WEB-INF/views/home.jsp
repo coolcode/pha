@@ -10,7 +10,7 @@
 	
 		<div ng-app="app" ng-controller="HomeController">
 			<h1 class="text-center">Home</h1> 
-			<p><img src="https://images.theonlinesurgery.co.uk/banner-home-gp.jpg" width = "1000" height="350" class="rounded"><br></p>
+			<p><img src="http://res.cloudinary.com/yopo/image/upload/v1508995517/doctoronline/banner.jpg" style="width:100%" class="rounded"><br></p>
 			<div class="row">	
 				<div class="col-xs-12 col-sm-6 col-md-6">				
 					<div class="panel panel-info">

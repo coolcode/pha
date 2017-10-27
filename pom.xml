@@ -4,12 +4,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.meecat</groupId>
-	<artifactId>doctorapp</artifactId>
+	<artifactId>pha</artifactId>
 	<version>1.0</version>
 	<packaging>war</packaging>
 
-	<name>doctorapp</name>
-	<description>Doctor Online</description>
+	<name>pha</name>
+	<description>Personal Health Assistant</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -60,6 +60,10 @@
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
 		</dependency>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3d5eff1f1d313afc5062270e0e3bc8ad6a4b92f4
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
@@ -113,15 +117,6 @@
 			<artifactId>tomcat-embed-jasper</artifactId>
 			<scope>provided</scope>
 		</dependency>
-
-		<!-- Need this to compile JSP,
-			tomcat-embed-jasper version is not working, no idea why 
-		<dependency>
-			<groupId>org.eclipse.jdt.core.compiler</groupId>
-			<artifactId>ecj</artifactId>
-			<version>4.6.1</version>
-			<scope>provided</scope>
-		</dependency>-->
 		
 		<!-- cloudinary Cloud Image Management -->
 		<dependency>

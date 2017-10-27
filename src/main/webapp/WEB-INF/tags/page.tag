@@ -15,7 +15,7 @@
 	<link rel="apple-touch-icon-precomposed" href="${pageContext.request.contextPath}/resources/img/logo.png" />
 	<meta name="msapplication-TileImage" content="${pageContext.request.contextPath}/resources/img/logo.png" />
 	
-	<title>Doctor Online</title>
+	<title>Personal Health Assistant</title>
 	
 	<!--  CSS -->
 	<link href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css" rel="stylesheet"> 
@@ -39,7 +39,7 @@
 				</button>
 				<a class="navbar-brand" href="${pageContext.request.contextPath}/">
 					<img class="logo" src="${pageContext.request.contextPath}/resources/img/logo.png"/>
-					<span class="site-title">Doctor Online </span>
+					<span class="site-title">Personal Health Assistant</span>
 				</a>
 			</div>
 	        <div id="navbar" class="navbar-collapse collapse">
@@ -47,7 +47,8 @@
 					<li><a href="${pageContext.request.contextPath}/">Home</a></li>
 					<li><a href="${pageContext.request.contextPath}/forum"> Discussion Board </a></li> 
 					<li><a href="${pageContext.request.contextPath}/chat"> Chat</a></li>
-					<li><a href="${pageContext.request.contextPath}/wiki"> Wiki </a></li> 
+					<li><a href="${pageContext.request.contextPath}/wiki"> Wiki </a></li>
+					<li><a href="${pageContext.request.contextPath}/quiz/quiz_user"> Quiz </a></li> 
 					<li><a href="${pageContext.request.contextPath}/announcement">Announcement</a></li>
 					<li><a href="${pageContext.request.contextPath}/medicine">Medicine</a></li>
 					<li><a href="${pageContext.request.contextPath}/user/logout">Logout</a></li>
@@ -82,6 +83,10 @@
 		</div>
 
 	</div>
+	
+	<footer>
+		<div class="center"><a href="https://github.com/coolcode/pha" target="_blank">Source on Github</a></div>
+	</footer>
 	<!-- Scripts ================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
 	<script src="${pageContext.request.contextPath}/resources/js/jquery.min.js"></script>
