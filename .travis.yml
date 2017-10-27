@@ -3,6 +3,7 @@ jdk:
  - oraclejdk8
 before_install:
  - chmod +x mvnw
+before_deploy: "git push origin master:refs/heads/master"
 deploy:
   provider: azure_web_apps
   username: meerkat       # If AZURE_WA_USERNAME isn't set
