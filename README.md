@@ -1,8 +1,8 @@
 # PHA
 
-## CI 
+## CI (Travis)
 
-travis: [![CI.png](https://travis-ci.org/coolcode/pha.svg?branch=master)](https://travis-ci.org/coolcode/pha)
+[![CI.png](https://travis-ci.org/coolcode/pha.svg?branch=master)](https://travis-ci.org/coolcode/pha)
 
 ## Env
 JDK 1.8 + Spring MVC Boot
