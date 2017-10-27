@@ -15,9 +15,9 @@ public class EmailApiTests {
 	public void sendEmailTest() throws IOException {
 		String apikey = "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";
 		Email from = new Email("bruce.meerkat@gmail.com");
-		String subject = "Hello World - Send From Doctor Online";
+		String subject = "CI - PHA";
 		Email to = new Email("coolcode@live.com");
-		Content content = new Content("text/html", "<h1>Hello World!</h1>");
+		Content content = new Content("text/html", "<h1>CI Success!</h1>");
 		Mail mail = new Mail(from, subject, to, content);
 
 		SendGrid sg = new SendGrid(apikey);
