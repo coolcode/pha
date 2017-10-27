@@ -13,7 +13,7 @@
 	<h1 class="text-center">Discussion Board</h1>
 	<div ng-app="app" ng-controller="ForumController">					
 		<div class="panel panel-info">
-			<div class="panel-heading">Welcome to discussion board!</div>
+			<div class="panel-heading">Welcome to PHA discussion board!</div>
 			<table class="table table-condensed">
 			  <tbody>
 				  <tr ng-repeat="x in posts">

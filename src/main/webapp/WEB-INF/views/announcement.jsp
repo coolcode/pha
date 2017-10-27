@@ -10,10 +10,10 @@
 		<script src="${pageContext.request.contextPath}/resources/js/app/announcement.js"></script> 
     </jsp:attribute>
 <jsp:body>
-<h1 class="text-left">Announcement</h1>
+<h1 class="text-left">Announcements</h1>
 <div ng-app="app" ng-controller="AnnouncementController">					
 		<div class="panel panel-info">
-			<div class="panel-heading">Welcome to Doctor Online Announcement!</div>  
+			<div class="panel-heading">Welcome to PHA Announcement Board!</div>  
 			<table class="table table-condensed">
 			  <tbody>
 				  <tr ng-repeat="x in announcements">
