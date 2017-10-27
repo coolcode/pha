@@ -85,7 +85,7 @@
 	</div>
 	
 	<footer>
-		<div class="center"><a href="https://github.com/coolcode/pha" target="_blank">Source on Github</a></div>
+<!-- 		<div class="center"><a href="https://github.com/coolcode/pha" target="_blank">Source on Github</a></div> -->
 	</footer>
 	<!-- Scripts ================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
