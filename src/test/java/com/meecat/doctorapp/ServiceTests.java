@@ -14,7 +14,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import com.meecat.doctorapp.domain.*;
-import com.meecat.doctorapp.service.ScriptService;
+import com.meecat.doctorapp.service.*;
 import com.meecat.doctorapp.dao.*;
  
 
@@ -24,7 +24,8 @@ public class ServiceTests {
  
 	@Test
 	public void scriptServiceTest() { 
-		assertNotNull("scriptServiceTest", "");
+		String value = "abc";
+		assertNotNull("scriptServiceTest", value);
 	}
 
 }
