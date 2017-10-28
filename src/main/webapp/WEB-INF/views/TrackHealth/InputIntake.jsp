@@ -10,8 +10,24 @@
 		<h1 class="text-left">Input Daily Intake</h1>
 					
 		<div class="panel panel-info">
-			<div class="panel-heading">XXX</div> 
-			<a href="${pageContext.request.contextPath}/fun/index2">Index 2</a>
+			<div class="panel-heading">Add Your Daily Input Here</div> 
+			<div class="container-fluid">
+				<div class="row">
+				<form class="form-inline" action="">
+					<div class="form-group col-sm-offset-1">
+						<label for="exampleInputEmail1">Food Type:</label>
+				    		<input type="text" class="form-control" id="exampleInputEmail1" placeholder="name">
+				  	</div>
+				  	<div class="form-group col-sm-offset-1">
+				    		<label for="exampleInputPassword1">    Quantity:</label>
+				    		<input type="number" class="form-control" id="exampleInputPassword1" placeholder="number">
+				 	</div>
+				 	<hr/>
+				 	<div class="col-sm-offset-4 col-sm-10"><button type="submit" class="btn btn-default">Submit</button></div>	
+				</form>
+			
+				</div>
+			</div>
 		</div>	  			  
     </jsp:body>
 </x:page>
