@@ -52,7 +52,8 @@
 					<li><a href="${pageContext.request.contextPath}/TrackHealth/"> TrackHealth </a></li>					 
 					<li><a href="${pageContext.request.contextPath}/announcement">Announcement</a></li>
 					<li><a href="${pageContext.request.contextPath}/medicine">Medicine</a></li>
-					<li><a href="${pageContext.request.contextPath}/user/logout">Logout</a></li>
+					<li><a href="${pageContext.request.contextPath}/logout">Logout</a></li>
+					<li><a href="${pageContext.request.contextPath}/#">${pageContext.request.userPrincipal.name }</a></li>
 	          </ul>
 <!-- 	          <form class="navbar-form navbar-right"> -->
 <!-- 	            <input type="text" class="form-control" placeholder="Search..."> -->
