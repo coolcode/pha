@@ -19,7 +19,8 @@ import com.meecat.doctorapp.service.*;
 
 
 
-//Main controller of the Announcement page 
+//Main controller of the Announcement  
+//Mapping the URLs for announcement page
 @Controller
 @Transactional
 @RequestMapping("/announcement")
