@@ -18,13 +18,13 @@
       <div class="row">
         <div class="col-md-7">
           <a href="#">
-            <img src="https://www.healthydietadvisor.com/wp-content/uploads/2014/08/eatright.png" width=500 height=300>
+            <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
           </a>
         </div>
         <div class="col-md-5">
-          <h3>Healthy Eating Quiz</h3>
+          <h3>Quiz One</h3>
           <p>The Healthy Eating Quiz is a general guide, designed to help you rate how healthy your eating habits are. It will help to identify areas in which you are already eating a wide variety of foods and areas where you may be able to improve. At the end of the quiz, you will receive a score with general feedback on your current eating patterns. It will also give you suggestions for ways to increase the variety of foods in your diet. </p>
-          <a class="btn btn-primary" href="${pageContext.request.contextPath}/quiz/quizContent">View Quiz</a>
+          <a class="btn btn-primary" href="#">View Project</a>
         </div>
       </div>
 
