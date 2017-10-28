@@ -1,7 +1,7 @@
 <%@ page session="false" contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib prefix="x" tagdir="/WEB-INF/tags"%>
  
-
+<!-- Main page of the script -->
 <x:page>    
 	<jsp:attribute name="script">	   
 		<script src="${pageContext.request.contextPath}/resources/js/app/script.js"></script>	
