@@ -49,6 +49,6 @@ public class WikiRestController {
 
 	@GetMapping("/top/{n}")
 	public List<Wiki> getWikis(@PathVariable("n") int n) {
-		return wikiService.getNewestWikis(n);
+		return wikiService.getNewestWikis(5);
 	}
 }

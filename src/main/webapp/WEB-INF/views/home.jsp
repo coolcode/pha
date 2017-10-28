@@ -23,7 +23,7 @@
 				</div>
 				<div class="col-xs-12 col-sm-6 col-md-6">				
 					<div class="panel panel-info">
-						<div class="panel-heading">Knowledge Library</div>
+						<div class="panel-heading">Doctors</div>
 						<ul class="list-group">
 						  <li class="list-group-item" ng-repeat="x in wikis"><a
 								href="${pageContext.request.contextPath}/wiki/{{x.id}}" target="_blank">{{x.title | limitTo:50}}</a></li> 
