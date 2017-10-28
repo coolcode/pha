@@ -6,7 +6,7 @@ before_install:
 after_success:
  #- mv target/pha-1.0.war target/ROOT.war
  #- "curl -T target/ROOT.war -u pha5620\\meerkat:Elec5620 ftp://waws-prod-sn1-131.ftp.azurewebsites.windows.net/site/wwwroot/webapps/"
- - curl --upload-file target/pha-1.0.war "http://admin:yopo@pha5620.meecat.com:8080/manager/text/deploy?path=/pha&update=true"
+ - curl --upload-file target/pha-1.0.war "http://admin:yopo@v.meecat.com:8080/manager/text/deploy?path=/pha&update=true"
 
     
 #deploy:
