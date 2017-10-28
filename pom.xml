@@ -81,19 +81,16 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		
-		<!-- thymeleaf 
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-thymeleaf</artifactId>
-        </dependency> -->
-        
+
+		<!-- thymeleaf <dependency> <groupId>org.springframework.boot</groupId> 
+			<artifactId>spring-boot-starter-thymeleaf</artifactId> </dependency> -->
+
 		<!-- tag -->
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-taglibs</artifactId>
 		</dependency>
-		
+
 		<!-- JSTL for JSP -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
@@ -101,10 +98,10 @@
 		</dependency>
 
 		<dependency>
-		    <groupId>javax.servlet.jsp</groupId>
-		    <artifactId>jsp-api</artifactId>
-		    <version>2.1</version>
-		    <scope>provided</scope>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>jsp-api</artifactId>
+			<version>2.1</version>
+			<scope>provided</scope>
 		</dependency>
 
 		<!-- Need this to compile JSP -->
@@ -113,7 +110,7 @@
 			<artifactId>tomcat-embed-jasper</artifactId>
 			<scope>provided</scope>
 		</dependency>
-		
+
 		<!-- cloudinary Cloud Image Management -->
 		<dependency>
 			<groupId>com.cloudinary</groupId>
@@ -137,41 +134,37 @@
 			<artifactId>mediawiki-japi</artifactId>
 			<version>0.0.21</version>
 		</dependency>
-				
-		<!-- Hibernate 
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-core</artifactId>
-			<version>5.2.5.Final</version>
-		</dependency>	-->
+
+		<!-- Hibernate <dependency> <groupId>org.hibernate</groupId> <artifactId>hibernate-core</artifactId> 
+			<version>5.2.5.Final</version> </dependency> -->
 		<!-- Rest JSON -->
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
-			<artifactId>jackson-databind</artifactId> 
+			<artifactId>jackson-databind</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
-			<artifactId>jackson-annotations</artifactId> 
+			<artifactId>jackson-annotations</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>com.fasterxml.jackson.datatype</groupId>
-			<artifactId>jackson-datatype-jsr310</artifactId> 
+			<artifactId>jackson-datatype-jsr310</artifactId>
 		</dependency>
-		
+
 		<!-- fix java8 localdatetime -->
 		<dependency>
-		    <groupId>org.hibernate</groupId>
-		    <artifactId>hibernate-java8</artifactId> 
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-java8</artifactId>
 		</dependency>
-		
-			
+
+
 		<!-- email service -->
 		<dependency>
-		    <groupId>com.sendgrid</groupId>
-		    <artifactId>sendgrid-java</artifactId> 
-			<version>4.0.1</version><!--$NO-MVN-MAN-VER$-->
+			<groupId>com.sendgrid</groupId>
+			<artifactId>sendgrid-java</artifactId>
+			<version>4.0.1</version><!--$NO-MVN-MAN-VER$ -->
 		</dependency>
-		
+
 	</dependencies>
 
 	<build>
@@ -180,8 +173,18 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<plugin>
+			    <groupId>org.apache.tomcat.maven</groupId>
+			    <artifactId>tomcat7-maven-plugin</artifactId>
+			    <version>2.2</version>
+			    <configuration>
+			        <url>http://pha5620.meecat.com:8080/manager/text</url>
+			        <server>tomcat8_meecat</server>
+			        <username>admin</username>
+			        <password>yopo</password>
+			    </configuration>
+			</plugin>			
 		</plugins>
 	</build>
-
 
 </project>

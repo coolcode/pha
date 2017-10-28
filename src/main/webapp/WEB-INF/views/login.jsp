@@ -67,7 +67,7 @@
 <!-- 			        <button class="btn btn-default"  onclick="register()">Register</button> -->
 <!-- 			        </form> -->
 			          <hr/>
-				   <button class="btn btn-default"  onclick="myFacebookLogin()">Login with Facebook</button>
+				   <button class="btn btn-default"  onclick="myFacebookLogin()">Facebook</button>
 		          
 <!-- 		            <div class="fb-login-button" data-max-rows="1" data-size="medium" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="true"></div> -->
   					<div id="status" class="alert alert-danger" role="alert" style="display:none;"></div>

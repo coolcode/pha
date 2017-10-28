@@ -1,19 +1,13 @@
 language: java
 jdk:
  - oraclejdk8
-cache:
-  directories:
-  - .autoconf
-  - $HOME/.m2
 before_install:
  - chmod +x mvnw
-env:
-  global:
-    - "FTP_USER=pha5620\\meerkat"
-    - "FTP_PASSWORD=Elec5620"    
 after_success:
- - mv target/pha-1.0.war target/ROOT.war
- - curl -T target/ROOT.war -u pha5620\\meerkat:Elec5620 ftp://waws-prod-sn1-131.ftp.azurewebsites.windows.net/site/wwwroot/webapps/
+ #- mv target/pha-1.0.war target/ROOT.war
+ #- "curl -T target/ROOT.war -u pha5620\\meerkat:Elec5620 ftp://waws-prod-sn1-131.ftp.azurewebsites.windows.net/site/wwwroot/webapps/"
+ - curl --upload-file pha-1.0.war "http://admin:yopo@pha5620.meecat.com:8080/manager/text/deploy?path=/pha&update=true"
+
     
 #deploy:
 #  provider: azure_web_apps

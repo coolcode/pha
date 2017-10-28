@@ -4,6 +4,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
 
 import com.cloudinary.Cloudinary;
@@ -12,12 +14,18 @@ import com.cloudinary.Cloudinary;
 @EnableAutoConfiguration
 //@EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class})
 @EntityScan( basePackages = {"com.meecat.doctorapp.domain"} )
-public class DoctorappApplication {
+public class DoctorappApplication  extends SpringBootServletInitializer {
 
 	public static void main(String[] args) {
 		SpringApplication.run(DoctorappApplication.class, args);
 	}
-	
+
+
+    @Override
+    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+        return application.sources(DoctorappApplication.class);
+    }
+
 
 	@Bean
 	public Cloudinary cloudinary() {
