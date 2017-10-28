@@ -27,9 +27,14 @@ public class QuizController {
 	
 	}
 
-	@GetMapping("/index2")
+	@GetMapping("/quiz_doctor")
 	public String index2(Model model) {
-		return "quiz/index2";
+		return "quiz/quiz_doctor";
+	
+	}
+	@GetMapping("/quizContent")
+	public String index3(Model model) {
+		return "quiz/quizContent";
 	
 	}
 	
