@@ -41,12 +41,17 @@ public class User extends BaseEntity {
     private int verification;
 
     @JsonIgnore
-    @ManyToMany(cascade = {CascadeType.ALL}, fetch=FetchType.LAZY)
-    @JoinTable(
-        name = "UserRole",
-        joinColumns = @JoinColumn(name = "userid"),
-        inverseJoinColumns = @JoinColumn(name = "roleid")
-    )
+//    @ManyToMany(cascade = {CascadeType.ALL}, fetch=FetchType.LAZY)
+//    @JoinTable(
+//        name = "UserRole",
+//        joinColumns = @JoinColumn(name = "userid"),
+//        inverseJoinColumns = @JoinColumn(name = "roleid")
+//    )
+    @ManyToMany
+    @JoinTable( 
+        name = "UserRole", 
+        joinColumns = @JoinColumn( name = "userid", referencedColumnName = "id"), 
+        inverseJoinColumns = @JoinColumn(  name = "roleid", referencedColumnName = "id")) 
     private List<Role> roles = new ArrayList<Role>( );
     
 

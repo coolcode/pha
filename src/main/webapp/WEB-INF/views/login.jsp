@@ -52,7 +52,7 @@
 			<h1 class="text-center">Sign In</h1> 
 			<div class="row">	
 				<div class="col-xs-12 col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">	 
-			        <form action="${pageContext.request.contextPath}/user/login" method="post">
+			        <form action="${pageContext.request.contextPath}/login" method="post">
 			            <div class="form-group">
 			            	<label> User Name </label>
 			            	<input type="text" name="username" class="form-control"/> 
@@ -63,14 +63,11 @@
 			            </div>
 			            <div><input type="submit" class="btn btn-default" value="Sign In" /></div>
 			        </form>	
-<%-- 			        <form action="${pageContext.request.contextPath}/user/register" method="post"> --%>
-<!-- 			        <button class="btn btn-default"  onclick="register()">Register</button> -->
-<!-- 			        </form> -->
-			          <hr/>
-				   <button class="btn btn-default"  onclick="myFacebookLogin()">Facebook</button>
-		          
-<!-- 		            <div class="fb-login-button" data-max-rows="1" data-size="medium" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="true"></div> -->
-  					<div id="status" class="alert alert-danger" role="alert" style="display:none;"></div>
+ 
+			          <hr/>  
+			          <a href="${pageContext.request.contextPath}/register">Register</a>
+			          
+			          <div id="status" class="alert alert-danger" role="alert" style="display:none;"></div>
 					
 				</div> 
 			</div> 

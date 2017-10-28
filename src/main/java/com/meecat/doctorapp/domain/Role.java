@@ -1,6 +1,7 @@
 package com.meecat.doctorapp.domain;
  
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List; 
 
 import javax.persistence.*;
@@ -15,14 +16,24 @@ public class Role extends BaseEntity {
     private String name; 
 
     @JsonIgnore
-    @ManyToMany(cascade = {CascadeType.ALL}, fetch=FetchType.EAGER)
-    @JoinTable(
-        name = "UserRole",
-        joinColumns = @JoinColumn(name = "roleid"),
-        inverseJoinColumns = @JoinColumn(name = "userid")
-    ) 
+//    @ManyToMany(cascade = {CascadeType.ALL}, fetch=FetchType.EAGER)
+//    @JoinTable(
+//        name = "UserRole",
+//        joinColumns = @JoinColumn(name = "roleid"),
+//        inverseJoinColumns = @JoinColumn(name = "userid")
+//    ) 
+
+    @ManyToMany(mappedBy = "roles")
     private List<User> users = new ArrayList<User>( );
 
+    @JsonIgnore
+    @ManyToMany
+    @JoinTable(
+        name = "RolePrivilege", 
+        joinColumns = @JoinColumn( name = "roleid", referencedColumnName = "id"), 
+        inverseJoinColumns = @JoinColumn( name = "privilegeid", referencedColumnName = "id"))
+    private Collection<Privilege> privileges;   
+    
 	public String getName() {
 		return name;
 	}
@@ -37,6 +48,15 @@ public class Role extends BaseEntity {
 
 	public void setUsers(List<User> users) {
 		this.users = users;
+	}
+
+	public Collection<Privilege> getPrivileges() {
+		return privileges;
+	}
+
+	public void setPrivileges(Collection<Privilege> privileges) {
+		this.privileges = privileges;
 	} 
      
+	
 }

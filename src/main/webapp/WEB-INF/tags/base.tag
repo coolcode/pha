@@ -8,14 +8,14 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-	<meta name="description" content="Doctor Online">
+	<meta name="description" content="Personal Health Assistant">
 	<meta name="author" content="Bruce Lee">
 	<link rel="icon" href="${pageContext.request.contextPath}/resources/img/logo.png" sizes="32x32" />
 	<link rel="icon" href="${pageContext.request.contextPath}/resources/img/logo.png" sizes="192x192" />
 	<link rel="apple-touch-icon-precomposed" href="${pageContext.request.contextPath}/resources/img/logo.png" />
 	<meta name="msapplication-TileImage" content="${pageContext.request.contextPath}/resources/img/logo.png" />
 	
-	<title>Doctor Online</title>
+	<title>Personal Health Assistant</title>
 	
 	<!--  CSS -->
 	<link href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css" rel="stylesheet"> 
@@ -39,7 +39,7 @@
 				</button>
 				<a class="navbar-brand" href="${pageContext.request.contextPath}/">
 					<img class="logo" src="${pageContext.request.contextPath}/resources/img/logo.png"/>
-					<span class="site-title">Doctor Online </span>
+					<span class="site-title">Personal Health Assistant </span>
 				</a>
 			</div>
 	        <div id="navbar" class="navbar-collapse collapse">
@@ -55,18 +55,6 @@
 
 	<div class="container-fluid">
 		<div class="row">
-<!-- 			<div class="col-sm-3 col-md-2 sidebar"> -->
-<!-- 				<ul class="nav nav-sidebar"> -->
-<%-- 					<li class="active"><a href="${pageContext.request.contextPath}/">Home <span --%>
-<!-- 							class="sr-only">(current)</span></a></li>  -->
-<%-- 					<li><a href="${pageContext.request.contextPath}/hibernateDaoAdd">[Demo] hibernateDaoAdd</a></li> --%>
-<%-- 					<li><a href="${pageContext.request.contextPath}/hibernateDaoServiceAdd"> [Demo]hibernateDaoServiceAdd</a></li> --%>
-<%-- 					<li><a href="${pageContext.request.contextPath}/hibernateQuery">[Demo] hibernateQuery</a></li> --%>
-<%-- 					<li><a href="${pageContext.request.contextPath}/chat">Chat</a></li> --%>
-<!-- 				</ul> -->
-<!-- 				<ul class="nav nav-sidebar"> -->
-<!-- 				</ul> -->
-<!-- 			</div> <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main"> -->
 			<div class="col-sm-12 col-md-12 main">
 				<!--  custom content begin================================================== -->
 				<jsp:doBody />

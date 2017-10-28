@@ -11,7 +11,7 @@ import com.meecat.doctorapp.domain.*;
 public class UserService {
 
 	@Autowired
-	private UserDao userDao;
+	private UserRepository userRepository;
 
 	public Boolean authenticate(String email, String password) {
 		return true ;
@@ -25,63 +25,18 @@ public class UserService {
 	
 
 	public User getUserById(int id){
-		return userDao.get(id);
+		return userRepository.findOne(id);
 	}
 	public User getUserByEmail(String email) {
-		return userDao.getUserByEmail(email);
+		return userRepository.findByEmail(email);
 	}
 	
 	public User getCurrentUser() {
-		return userDao.get(1);
-	}
-	
-	
-	public boolean ifUserisDoctor(int id) {
-		List<Role> roles = userDao.getRolesByUserId(id);
-		boolean ifUerisDoctor = false;
-		for(int a = 0; a < roles.size();a++) {
-			String name = roles.get(a).getName();
-			if (name == "doctor") {
-				ifUerisDoctor = true;
-			}			
-		}
-		return ifUerisDoctor;
-	}
-
-	
-	public void createDemoDoctor() {
-
-		User user = new User();
-		user.setEmail("e@test1.com");
-		user.setPassword("test");
-		user.setVerification(0);
-		Role role = new Role();
-		role.setName("doctor");
-
-		user.getRoles().add(role);
-
-		userDao.save(user);
-	}
-
-	public void createDemoPatient() {
-
-		User user = new User();
-		user.setEmail("e@test1.com");
-		user.setPassword("test");
-		user.setDisplayName("xiaozhou");
-		user.setVerification(1);
-		Role role = new Role();
-		role.setName("patient");
-
-		user.getRoles().add(role);
-
-		userDao.save(user);
-	}
-
-
+		return userRepository.findOne(1);
+	}	 
 
 	public void fb(String name, String email, String pic) {
-		User user= userDao.getUserByEmail(email);
+		User user= userRepository.findByEmail(email);
 		if(user==null){
 			user = new User();
 			user.setEmail(email);
@@ -90,7 +45,7 @@ public class UserService {
 			user.setIcon(pic);
 		}
 		
-		userDao.save(user);
+		userRepository.save(user);
 	}
 
 }

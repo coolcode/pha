@@ -36,7 +36,6 @@ public class MedicineController {
 		logger.info("medicine"); 
 		User currentUser = userService.getCurrentUser();
 		model.addAttribute("currentUser", currentUser);	
-		model.addAttribute("ifUserisDoctor", userService.ifUserisDoctor(currentUser.getId()));
 
 		return "medicine";
 	

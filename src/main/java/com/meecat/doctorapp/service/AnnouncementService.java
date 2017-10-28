@@ -28,7 +28,7 @@ public class AnnouncementService {
 	private AnnouncementDao announcementDao;	
 
 	@Autowired
-	private UserDao userDao;
+	private UserRepository userRepository;
 	
 	public List<Announcement> getList() { 
 		return announcementDao.getList();
@@ -60,7 +60,7 @@ public class AnnouncementService {
 	}
 	
 	public void sendEmailToAllUsers(Announcement a) {
-		List<User> users = userDao.list();
+		List<User> users = userRepository.findAll();
 		for (User user : users) {
 			sendEmail(user.getEmail(), a.getTitle(), a.getContent() );
 		}

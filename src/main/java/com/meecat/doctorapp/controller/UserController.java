@@ -67,7 +67,7 @@ public class UserController {
 		ModelAndView model = new ModelAndView();
 		if (userService.authenticate(param.getUsername(), param.getPassword()) == true) {
 			User user = userService.getUserByEmail(param.getUsername());
-			if (userService.ifUserisDoctor(user.getId())) {
+			if (false) {
 				saveLoginSession(response);
 				return "redirect:/wiki";
 			} else {

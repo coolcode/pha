@@ -18,8 +18,6 @@ public class ScriptService {
     @Autowired
     private ScriptDao scriptDao; 
 
-    @Autowired
-    private MessageDao messageDao; 
     
     public List<Medicine> getAllMedicines() { 
        return medicineDao.list();
@@ -34,7 +32,7 @@ public class ScriptService {
        message.setAttachment(newScript.getId());
        message.setReceiver(newScript.getPatient());
        message.setSender(newScript.getDoctor());       
-       messageDao.sendMessage(message);
+       //messageDao.sendMessage(message);
     }
 
 	public Script getScript(int id) { 

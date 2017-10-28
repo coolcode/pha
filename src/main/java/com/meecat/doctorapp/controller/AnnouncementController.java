@@ -40,8 +40,6 @@ public class AnnouncementController {
 		logger.info("announcement"); 
 		User currentUser = userService.getCurrentUser();
 		model.addAttribute("currentUser", currentUser);	
-		model.addAttribute("ifUserisDoctor", userService.ifUserisDoctor(currentUser.getId()));
-//Announcement detail page.
 		return "announcement";
 	
 	}
