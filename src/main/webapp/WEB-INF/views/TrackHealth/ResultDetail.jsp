@@ -4,9 +4,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>Details</title>
 </head>
 <body>
+<h1>This page will show the report.</h1>
 
 </body>
 </html>

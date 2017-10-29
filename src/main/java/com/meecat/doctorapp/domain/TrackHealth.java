@@ -6,7 +6,7 @@ import javax.persistence.*;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 @Entity
-@Table
+@Table(name="TrackHealth")
 public class TrackHealth extends BaseEntity{
 	
 	@OneToOne(fetch=FetchType.EAGER)

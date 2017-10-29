@@ -1,12 +1,21 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
+<%@ page session="false" contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib prefix="x" tagdir="/WEB-INF/tags"%>
 
-</body>
-</html>
+
+
+<!-- Main page of Announcement -->
+<x:page> 
+    <jsp:attribute name="css">
+    </jsp:attribute> 
+    <jsp:attribute name="script">
+    </jsp:attribute>
+	<jsp:body>
+		<h1 class="text-left">View History</h1>
+									
+		<div class="panel panel-info">
+			<div class="panel-heading"></div>
+			<h1>FoodType:</h1>apple
+			<h1>Quantity:</h1>100g
+		</div>	  
+    </jsp:body>
+</x:page>

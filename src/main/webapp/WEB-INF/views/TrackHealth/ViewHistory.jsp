@@ -8,6 +8,7 @@
     <jsp:attribute name="css">
     </jsp:attribute> 
     <jsp:attribute name="script">
+    		<script src="${pageContext.request.contextPath}/resources/js/app/TrackHealth.js"></script>	 
     </jsp:attribute>
 	<jsp:body>
 		<h1 class="text-left">View History</h1>

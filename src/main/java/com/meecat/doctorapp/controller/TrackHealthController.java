@@ -32,9 +32,9 @@ import com.meecat.doctorapp.service.*;
 @Controller
 @Transactional
 @RequestMapping("/TrackHealth")
-public class TrachHealthController {
+public class TrackHealthController {
 
-	private static final Logger logger = LoggerFactory.getLogger(TrachHealthController.class); 
+	private static final Logger logger = LoggerFactory.getLogger(TrackHealthController.class); 
 	
 	@Autowired
 	TrackHealthService track;
@@ -88,4 +88,17 @@ public class TrachHealthController {
 		return "TrackHealth/ViewHistory";
 	
 	}
+	
+	@GetMapping("/histroy/{id}")
+	public String ViewHistory(@PathVariable("id") int id, Model model) {
+		
+		TrackHealth trackHealth = track.get(id);
+		model.addAttribute("T", trackHealth );
+		model.addAttribute("currentUser", userService.getCurrentUser() );
+		
+		return "TrackHealth/HistoryDetail";
+	
+	}
+	
+	
 }
