@@ -18,29 +18,29 @@ import com.meecat.doctorapp.domain.TrackHealth;
 public class TrackHealthService { 
 
 	@Autowired
-	private TrackHealthDao Track; 
+	private TrackHealthDao track; 
 
 	private static final Logger logger = LoggerFactory.getLogger(TrackHealthService.class); 
 
 	public List<TrackHealth> listTrackHealth() { 
-		return Track.List();
+		return track.List();
 	}
 	
 	public TrackHealth save(TrackHealth wiki) {
-		Track.save(wiki);
+		track.save(wiki);
 		return wiki;
 	}
 
 	public TrackHealth get(int wikiId) {
-		return Track.get(wikiId); 
+		return track.get(wikiId); 
 	}
 	
 	public void delete(int wikiId) {
-		Track.delete(wikiId); 
+		track.delete(wikiId); 
 	} 
 	
 	
 	public List<TrackHealth> getEachItem(int count){
-		return Track.getOwnList(count);
+		return track.getOwnList(count);
 	}
 }

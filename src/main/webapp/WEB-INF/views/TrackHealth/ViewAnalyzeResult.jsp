@@ -11,7 +11,7 @@
 					
 		<div class="panel panel-info">
 			<div class="panel-heading">XXX</div> 
-			<a href="${pageContext.request.contextPath}/TrackHealth/ResultDetail">Index 2</a>
+			<a href="${pageContext.request.contextPath}/TrackHealth/ResultDetail">Report</a>
 		</div>	  			  
     </jsp:body>
 </x:page>

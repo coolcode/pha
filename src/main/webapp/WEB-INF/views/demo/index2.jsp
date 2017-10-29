@@ -10,7 +10,7 @@
 		<h1 class="text-left">Demo</h1>
 					
 		<div class="panel panel-info">
-			<div class="panel-heading">2</div> 
+		    <div class="panel-heading">2</div> 
 		</div>	  			  
     </jsp:body>
 </x:page>
