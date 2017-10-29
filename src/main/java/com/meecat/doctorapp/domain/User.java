@@ -6,10 +6,11 @@ import java.util.List;
 
 import javax.persistence.*;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore; 
 
 @Entity
-@Table
+@Table 
 public class User extends BaseEntity {
 
     @Column(name="email", unique=true)
@@ -24,9 +25,11 @@ public class User extends BaseEntity {
     @Column
     private String icon;
 
+    @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss", timezone = "UTC")
 	@Column 
     private LocalDateTime createDate;
 
+    @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss", timezone = "UTC")
     @Column 
     private LocalDateTime birthday;
     

@@ -29,9 +29,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	// Authentication : User --> Roles
 	protected void configure(AuthenticationManagerBuilder auth)
 			throws Exception {
-		auth.inMemoryAuthentication().withUser("user1").password("p1")
-				.roles("USER").and().withUser("admin1").password("p1")
-				.roles("USER", "ADMIN");
+//		auth.inMemoryAuthentication().withUser("user1").password("p1")
+//				.roles("USER").and().withUser("admin1").password("p1")
+//				.roles("USER", "ADMIN");
 		
 		auth.
 		jdbcAuthentication()
@@ -57,11 +57,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
             .and()
         .csrf().disable()
  	    .headers().frameOptions().disable();
-		
-//		http.authorizeRequests().antMatchers("/students/**")
-//				.hasRole("USER").antMatchers("/users/**").hasRole("USER")
-//				.antMatchers("/**").hasRole("ADMIN").and().csrf().disable()
-//				.headers().frameOptions().disable();
+ 
 	}
 
 }

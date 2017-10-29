@@ -13,14 +13,14 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
-import com.meecat.doctorapp.controller.ScriptController;
+import com.meecat.doctorapp.controller.HomeController;
 import com.meecat.doctorapp.security.SecurityConfig;
 import com.fasterxml.jackson.databind.ObjectMapper;
  
 
 @RunWith(SpringRunner.class)  
 @ContextConfiguration(classes={DoctorappApplication.class, SecurityConfig.class})
-@WebMvcTest(ScriptController.class)
+@WebMvcTest(HomeController.class)
 public class ControllerTests { 
 
     @Autowired
@@ -29,7 +29,7 @@ public class ControllerTests {
 
     @Test
     public void testScriptController() throws Exception {  
-		//mockMvc.perform(get("/script?patient=1")).andExpect(status().isOk());
+		mockMvc.perform(get("/")).andExpect(status().isOk());
     }
 
 }

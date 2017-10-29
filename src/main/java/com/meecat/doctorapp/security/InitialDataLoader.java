@@ -39,10 +39,11 @@ public class InitialDataLoader implements ApplicationListener<ContextRefreshedEv
 
 		Privilege readPrivilege = createPrivilegeIfNotFound("READ_PRIVILEGE");
 		Privilege writePrivilege = createPrivilegeIfNotFound("WRITE_PRIVILEGE");
-
-		List<Privilege> adminPrivileges = Arrays.asList(readPrivilege, writePrivilege);
-		createRoleIfNotFound("ROLE_ADMIN", adminPrivileges);
+		Privilege doctorPrivilege = createPrivilegeIfNotFound("DOCTOR_PRIVILEGE");
+ 
+		createRoleIfNotFound("ROLE_ADMIN", Arrays.asList(readPrivilege, writePrivilege));
 		createRoleIfNotFound("ROLE_USER", Arrays.asList(readPrivilege));
+		createRoleIfNotFound("ROLE_DOCTOR", Arrays.asList(doctorPrivilege));
 
 		Role adminRole = roleRepository.findByName("ROLE_ADMIN");
 		List<User> users = userRepository.findAll();
@@ -56,6 +57,18 @@ public class InitialDataLoader implements ApplicationListener<ContextRefreshedEv
 			}
 		}
 
+		Role doctorRole = roleRepository.findByName("ROLE_DOCTOR");
+		User user = userRepository.findByEmail("doctor@test.com");
+		if (user == null) {
+			user = new User();
+			user.setEmail("doctor@test.com");
+			user.setDisplayName("Dr. Meerkat");
+			user.setPassword(passwordEncoder.encode("test"));
+			user.setIcon("http://res.cloudinary.com/yopo/image/upload/t_icon/v1506154115/doctoronline/pitt.jpg");
+			user.setRoles(Arrays.asList(doctorRole));
+			userRepository.save(user);
+		}
+		
 		alreadySetup = true;
 	}
 

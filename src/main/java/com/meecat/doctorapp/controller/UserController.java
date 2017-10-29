@@ -34,8 +34,13 @@ public class UserController {
 	UserService userService;
 
 	private static final Logger logger = LoggerFactory.getLogger(UserController.class);
+ 
 
-	ModelAndView model = new ModelAndView();
+	@RequestMapping("/list")
+	public String list(Model model) {
+		return "user/list";
+	}
+	
 
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public ModelAndView loginGET(@RequestParam(value = "error", required = false) String error,
@@ -50,40 +55,8 @@ public class UserController {
 		}
 		model.setViewName("login");
 		return model;
-	}
-
-	@RequestMapping("/login")
-	public String User(Model model) {
-		return "login";
-	}
-
-	@GetMapping("/register")
-	public String User1(Model model) {
-		return "register";
-	}
-
-	@PostMapping("/login")
-	public String login(HttpServletResponse response, @ModelAttribute UserLoginParam param) {
-		ModelAndView model = new ModelAndView();
-		if (userService.authenticate(param.getUsername(), param.getPassword()) == true) {
-			User user = userService.getUserByEmail(param.getUsername());
-			if (false) {
-				saveLoginSession(response);
-				return "redirect:/wiki";
-			} else {
-				return "redirect:/";
-			}
-		} else {
-			return "redirect:/user/login";
-		}
-	}
-
-	@PostMapping("/register")
-	public User register(@RequestBody User user) {
-		// user = userService.(user);
-		return user;
-	}
-
+	} 
+	
 	@GetMapping("/facebook_callback")
 	public String facebook_callback(HttpServletResponse response, Model model, @RequestParam(name = "name") String name,
 			@RequestParam(name = "email") String email, @RequestParam(name = "id") String id) {
