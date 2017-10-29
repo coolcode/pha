@@ -16,8 +16,7 @@ public class TrackHealthDao {
 	private EntityManager entityManager;
 
 	public TrackHealth get(int id) {
-		TrackHealth announcement = entityManager.find(TrackHealth.class, id);
-		return announcement;
+		return entityManager.find(TrackHealth.class, id);
 	}
 
 	public void save(TrackHealth announcement) {

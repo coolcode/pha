@@ -5,6 +5,8 @@ import javax.persistence.*;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
+@Entity
+@Table
 public class TrackHealth extends BaseEntity{
 	
 	@OneToOne(fetch=FetchType.EAGER)
@@ -20,9 +22,6 @@ public class TrackHealth extends BaseEntity{
 
 	@Column
     public String content;
-	
-	@Column
-	private int eachId;
 	
 	public String getFoodType() {
 		return foodType;
@@ -46,14 +45,6 @@ public class TrackHealth extends BaseEntity{
 
 	public void setCreateUser(User createUser) {
 		this.createUser = createUser;
-	}
-	
-	public int getEachId() {
-		return eachId;
-	}
-
-	public void setEachId(int n) {
-		this.eachId = n;
 	}
 	
 	public LocalDateTime getCreateDate() {

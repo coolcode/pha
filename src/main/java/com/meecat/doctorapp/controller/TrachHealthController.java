@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.meecat.doctorapp.domain.*;
 //import org.springframework.web.bind.annotation.RequestMethod;
@@ -38,6 +39,9 @@ public class TrachHealthController {
 	@Autowired
 	TrackHealthService track;
 	
+	@Autowired
+	private UserService userService;
+	
 	@GetMapping("/")
 	public String TrackHealth(Model model) {
 		return "TrackHealth/TrackHealth";
@@ -51,11 +55,14 @@ public class TrachHealthController {
 	}
 	
 	@PostMapping("/input")
-	public String ProcessInput(@RequestBody TrackHealth trackhealth) {
+	public String ProcessInput(Model model, @RequestParam String foodType, @RequestParam String quantity ) {
+		TrackHealth trackhealth = new TrackHealth();
 		trackhealth.setCreateDate(LocalDateTime.now());
-		
+		trackhealth.setFoodType(foodType);
+		trackhealth.setContent(quantity);
+		trackhealth.setCreateUser(userService.getCurrentUser());
+		track.save(trackhealth);
 		return ("redirect:/TrackHealth/");
-		
 	}
 	
 	@GetMapping("/result")
