@@ -83,6 +83,5 @@ angular.module('app', ['angular-loading-bar'])
               }
           }
       });
- 
 
   }]);

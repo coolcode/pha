@@ -38,11 +38,11 @@ public class AnnouncementService {
 		return announcementDao.getOwnList(id);
 	}
 	
-	public Announcement getAMNT(int id) {
-		Announcement announcement = announcementDao.getAnnouncement(id);
-		return announcement;
-	}
-	
+//	public Announcement getAMNT(int id) {
+//		Announcement announcement = announcementDao.getAnnouncement(id);
+//		return announcement;
+//	}
+//
 	public void deleletANMT(int aId) {
 		announcementDao.delete(aId);
 	}

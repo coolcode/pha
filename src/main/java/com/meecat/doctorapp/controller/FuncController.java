@@ -18,19 +18,26 @@ import com.meecat.doctorapp.service.*;
 
 @Controller
 @Transactional
-@RequestMapping("/fun")
-public class FunController {
+@RequestMapping("/func")
+public class FuncController {
 
-	@GetMapping("/index")
-	public String index(Model model) {
-		return "fun/index";
-	
+	@GetMapping("/endUserFunc")
+	public String endUserFunc(Model model) {
+		return "functionality/endUserFunc";
 	}
 
-	@GetMapping("/index2")
-	public String index2(Model model) {
-		return "fun/index2";
-	
+	@GetMapping("/doctorFunc")
+	public String doctorFunc(Model model) {
+		return "functionality/doctorFunc";
 	}
-	
+
+	@GetMapping("/technicalTeamFunc")
+	public String technicalTeamFunc(Model model) {
+		return "functionality/technicalTeamFunc";
+	}
+
+	@GetMapping("/addFunc")
+	public String addFunc(Model model) {
+		return "functionality/addFunc";
+	}
 }
