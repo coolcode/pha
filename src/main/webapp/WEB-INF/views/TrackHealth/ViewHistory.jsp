@@ -13,17 +13,18 @@
 	<jsp:body>
 		<h1 class="text-left">View History</h1>
 									
+		<div ng-app="app" ng-controller="WikiController">					
 		<div class="panel panel-info">
 			<div class="panel-heading"></div>
 			<table class="table table-condensed">
 			  <tbody>
-			  	<c:forEach items= "${a}" var="d">
-				 <tr>	  	
-					<td>${a.foodType}</td>
+				  <tr ng-repeat="x in wikis">
+				  	<td><img ng-src="{{x.createUser.icon}}"> <span>{{x.createUser.displayName}}</span><td>	  	
+					<td><a href="${pageContext.request.contextPath}/wiki/{{x.id}}">{{x.createDate}}</a></td>
 				  </tr>
-				  </c:forEach>
 			  </tbody>
 			</table>
-		</div>	  
+		</div>
+		</div>
     </jsp:body>
 </x:page>
