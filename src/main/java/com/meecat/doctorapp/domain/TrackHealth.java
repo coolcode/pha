@@ -16,19 +16,19 @@ public class TrackHealth extends BaseEntity{
     private LocalDateTime createDate; 
     
 	@Column
-    private String foodType;
+    public String foodType;
 
 	@Column
-    private String content;
+    public String content;
 	
 	@Column
 	private int eachId;
 	
-	public String getTitle() {
+	public String getFoodType() {
 		return foodType;
 	}
 
-	public void setTitle(String title) {
+	public void setFoodType(String title) {
 		this.foodType = title;
 	}
 

@@ -13,13 +13,13 @@
 			<div class="panel-heading">Add Your Daily Input Here</div> 
 			<div class="container-fluid">
 				<div class="row">
-				<form class="form-inline" action="">
+				<form class="form-inline" action="" method="post">
 					<div class="form-group col-sm-offset-1">
 						<label for="exampleInputEmail1">Food Type:</label>
 				    		<input type="text" class="form-control" id="exampleInputEmail1" placeholder="name">
 				  	</div>
 				  	<div class="form-group col-sm-offset-1">
-				    		<label for="exampleInputPassword1">    Quantity:</label>
+				    		<label for="exampleInputPassword1">Quantity:</label>
 				    		<input type="number" class="form-control" id="exampleInputPassword1" placeholder="number">
 				 	</div>
 				 	<hr/>
