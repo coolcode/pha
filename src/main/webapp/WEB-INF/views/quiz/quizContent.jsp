@@ -6,306 +6,516 @@
     </jsp:attribute> 
     <jsp:attribute name="script">
     </jsp:attribute>
+
 <jsp:body>
-		<div id="main">
-			<!--main-bg-->
-			<div class="main-bg">
-				<!--main-bg-holder-->
-				<div class="main-bg-holder">
-					<!--aside-->
-					<div class="aside">
-						<div class="heading">
-							<div class="holder">
-								<h1>Take The Quiz</h1>
-							</div>
-						</div>
-						<!--info-->
-						<dl class="info">
-							<dt>How long will the quiz take?</dt>
-							<dd>The quiz will only take about 10-15 minutes.</dd>
-						</dl>
-					</div>
-					<!--twocolumns-->
-					<div id="twocolumns">
-						<!--sidebar-->
-						<div id="sidebar">
-							<!--sub-nav-->
-							<!-- <ul class="sub-nav">	
-                    <li id="liNavSection1" class=""><a href="javascript: void();" onclick="javascript: void();" class="tab active" id="liContentTab-1" style="cursor: default;">About You</a></li>
-                    <li id="liNavSection2" class=""><a href="javascript: void();" onclick="javascript: void();" class="tab" id="liContentTab-2" style="cursor: default;">Vegetables</a></li>
-                    <li id="liNavSection3" class=""><a href="javascript: void();" onclick="javascript: void();" class="tab" id="liContentTab-3" style="cursor: default;">Fruit</a></li>
-                    <li id="liNavSection4" class=""><a href="javascript: void();" onclick="javascript: void();" class="tab" id="liContentTab-4" style="cursor: default;">Protein foods<br> - Meat/Fish/Chicken</a></li>
-                    <li id="liNavSection5" class=""><a href="javascript: void();" onclick="javascript: void();" class="tab" id="liContentTab-5" style="cursor: default;">Protein foods<br> - Vegetarian Alternatives</a></li>
-                    <li id="liNavSection6" class=""><a href="javascript: void();" onclick="javascript: void();" class="tab" id="liContentTab-6" style="cursor: default;">Grains</a></li>
-                    <li id="liNavSection7" class=""><a href="javascript: void();" onclick="javascript: void();" class="tab" id="liContentTab-7" style="cursor: default;">Dairy</a></li>
-                    <li id="liNavSection8" class=""><a href="javascript: void();" onclick="javascript: void();" class="tab" id="liContentTab-8" style="cursor: default;">Water</a></li>
-                    <li id="liNavSection9" class=""><a href="javascript: void();" onclick="javascript: void();" class="tab" id="liContentTab-9" style="cursor: default;">Sauces &amp; Condiments</a></li>
-                    <li id="liNavSection10" class=""><a href="javascript: void();" onclick="javascript: void();" class="tab" id="liContentTab-10" style="cursor: default;">Submit</a></li>
-                  
-							</ul> -->
-						</div>
-						<!--content-->
-						<div id="content">
-							<!--block-->
-							<div class="block">
-								<!--text-->
-								<div class="text" style="border: none;">
-
-                  <!-- <form name="frmContentEdit" id="frmContentEdit" method="post" action="/result.asp" target="_blank" onKeyPress="return disableEnterKey();" onSubmit="submitAJAXContent(this, '', '', 'initQuiz(req.responseText); hideAJAXFloatingPage(\'\');', false, 'intEntryID'); return false;"> -->
-                  <form name="frmContentEdit" id="frmContentEdit" method="post" action="/result.asp">
-                    <input type="hidden" name="strAction" value="SUBMIT">
-                
-                      
-                        <div id="divContentTab-1" class="tab-content" style="display: block;">
-                          <div id="divQuizSection-1" style="display: block;">
-  <h2>About You</h2>
-
-	<div class="progressBar">
-   
-   <span style="height: 40px; padding-right: 5px; vertical-align: middle;">Progress</span>
-   <img src="/quiz/image/progress-1.gif" title="Progress" alt="Progress" class="progressBar2">
-   
-  </div>
-
-	<br>
-  
-  	<table class="QuestionTable BorderTop">
-			
-        <tbody><tr id="trQuestion1">      	
-          <td class="LabelCell questionNo"><a name="Q1" id="Q1">&nbsp;</a></td>
-          <td class="LabelCell questionName">
-            Gender     
-          </td>
-          <td>
-					
-						<input type="hidden" name="intAnswer-1" id="intAnswer-1" value="">
-						
-								<img src="/quiz/image/radio-unchecked.gif" id="img1-1" onclick="javascript: radioSelect('1', '1', 'Male');" width="18" class="quizCheckbox"> <span onclick="radioSelect('1', '1', 'Male');" class="quizCheckboxLabel">Male</span>
-								&nbsp;&nbsp;&nbsp;&nbsp;
-								<img src="/quiz/image/radio-unchecked.gif" id="img1-2" onclick="javascript: radioSelect('1', '2', 'Female');" width="18" class="quizCheckbox"> <span onclick="radioSelect('1', '2', 'Female');" class="quizCheckboxLabel">Female</span>
-								
-          </td>
-        </tr>
+<body id="patas" class="translate survey-body modern-browser">
+    <article class="survey-page">
+    <header class="survey-page-header">
+    <div class="survey-title-container clearfix
+                survey-title-align-left has-survey-title ">
+ 
+        <div class="survey-title-table-wrapper">
+            <table role="presentation" class="survey-title-table table-reset">
+                <tbody>
+                    <tr>
+                            <td class="survey-title-cell">
+                                <h1 class="survey-title user-generated notranslate">
+                                    <span class="title-text">
+                                        Healthy Diet Quiz
+                                    </span>
+                                </h1>
+                            </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
         
-        <tr id="trQuestion2">      	
-          <td class="LabelCell questionNo"><a name="Q2" id="Q2">&nbsp;</a></td>
-          <td class="LabelCell questionName">
-            Age group (years)     
-          </td>
-          <td>
-					
-						<input type="hidden" name="intAnswer-2" id="intAnswer-2" value="">
-						
-								<img src="/quiz/image/radio-unchecked.gif" id="img2-186" onclick="javascript: radioSelect('2', '186', '< 2 - Not suitable for use in this age group'); disableQuiz(true);" width="18" class="quizCheckbox"> <span onclick="radioSelect('2', '186', '< 2 - Not suitable for use in this age group'); disableQuiz(true);" class="quizCheckboxLabel">&lt; 2 - Not suitable for use in this age group</span>
-								<div id="divQuizDisable" style="display: none; color: #FF0000; font-weight: bold;">
-                	Unfortunately you are unable to complete this quiz if you are under 2 years of age
+    </div>
+          
+    </header>
+    <section class="survey-page-body">
+            <h3 class="page-subtitle  user-generated notranslate">Do you have a healthy Diet?<br><br><font size = 2 >PLEASE ANSWER ALL 21 QUESTIONS THANK YOU!</font>
+            </h3>
+       
+        <form name="surveyForm" action="" method="post" enctype="multipart/form-data" novalidate="" data-survey-page-form="">          
+                <div class="questions clearfix">
+                  <div class="question-row clearfix">
+                    <div data-question-type="single_choice_vertical" class="question-container">
+                      <div id="question-field-703282544" data-qnumber="1" data-question-id="703282544" class=" question-single-choice-radio qn question vertical">
+                        <fieldset class=" question-fieldset" data-radio-button-group="">
+                          <h4 id="question-title-703282544" class="question-title-container">
+                           <span class="required-asterisk notranslate">
+                            *
+                           </span>
+
+                           <span class="question-number notranslate">
+                            1
+                           <span class="question-dot">.</span>
+                        </span>
+                        <span class="user-generated notranslate">How many days of the week do you eat breakfast?</span>
+                    
+                         </h4>
+                <div class="question-body clearfix notranslate "> 
+                <div class="">
+        
+        <div class="answer-option-cell">
+    <div data-sm-radio-button="" class="radio-button-container">
+        <input id="703282544_8063734428" name="703282544" type="radio" class="radio-button-input" value="8063734428">
+        <label data-sm-radio-button-label="" class="answer-label radio-button-label no-touch touch-sensitive clearfix" for="703282544_8063734428">
+            <span class="radio-button-display ">
+            </span>
+            <span class="radio-button-label-text question-body-font-theme user-generated">
+                Everyday    
+            </span>
+        </label>
+    </div>
+
+        </div>
+            
+        <div class="answer-option-cell">
+    <div data-sm-radio-button="" class="radio-button-container">
+        <input id="703282544_8063734430" name="703282544" type="radio" class="radio-button-input" value="8063734430">
+        <label data-sm-radio-button-label="" class="answer-label radio-button-label no-touch touch-sensitive clearfix" for="703282544_8063734430">
+            <span class="radio-button-display ">
+            </span>
+            <span class="radio-button-label-text question-body-font-theme user-generated">
+                3-4 days a week  
+            </span>
+        </label>
+    </div>
+
+        </div>
+        
+            </div>
+         
+         <div class="answer-option-cell">
+    <div data-sm-radio-button="" class="radio-button-container">
+        <input id="703282544_8063734430" name="703282544" type="radio" class="radio-button-input" value="8063734430">
+        <label data-sm-radio-button-label="" class="answer-label radio-button-label no-touch touch-sensitive clearfix" for="703282544_8063734430">
+            <span class="radio-button-display ">
+            </span>
+            <span class="radio-button-label-text question-body-font-theme user-generated">
+                1-2 days a week  
+            </span>
+        </label>
+    </div>
+
+        </div>
+        
+            </div>
+
                 </div>
-								<br><br>
-								<img src="/quiz/image/radio-unchecked.gif" id="img2-185" onclick="javascript: radioSelect('2', '185', '2-4');" width="18" class="quizCheckbox"> <span onclick="radioSelect('2', '185', '2-4');" class="quizCheckboxLabel">2-4</span>
-								&nbsp;&nbsp;&nbsp;&nbsp;
-								<img src="/quiz/image/radio-unchecked.gif" id="img2-4" onclick="javascript: radioSelect('2', '4', '5-8');" width="18" class="quizCheckbox"> <span onclick="radioSelect('2', '4', '5-8');" class="quizCheckboxLabel">5-8</span>
-								<br><br>
-								<img src="/quiz/image/radio-unchecked.gif" id="img2-153" onclick="javascript: radioSelect('2', '153', '9-15');" width="18" class="quizCheckbox"> <span onclick="radioSelect('2', '153', '9-15');" class="quizCheckboxLabel">9-15</span>
-								&nbsp;&nbsp;&nbsp;&nbsp;
-								<img src="/quiz/image/radio-unchecked.gif" id="img2-183" onclick="javascript: radioSelect('2', '183', '16-17');" width="18" class="quizCheckbox"> <span onclick="radioSelect('2', '183', '16-17');" class="quizCheckboxLabel">16-17</span>
-								<br><br>
-								<img src="/quiz/image/radio-unchecked.gif" id="img2-184" onclick="javascript: radioSelect('2', '184', '18-24');" width="18" class="quizCheckbox"> <span onclick="radioSelect('2', '184', '18-24');" class="quizCheckboxLabel">18-24</span>
-								&nbsp;&nbsp;&nbsp;&nbsp;
-								<img src="/quiz/image/radio-unchecked.gif" id="img2-155" onclick="javascript: radioSelect('2', '155', '25-34');" width="18" class="quizCheckbox"> <span onclick="radioSelect('2', '155', '25-34');" class="quizCheckboxLabel">25-34</span>
-								<br><br>
-								<img src="/quiz/image/radio-unchecked.gif" id="img2-156" onclick="javascript: radioSelect('2', '156', '35-44');" width="18" class="quizCheckbox"> <span onclick="radioSelect('2', '156', '35-44');" class="quizCheckboxLabel">35-44</span>
-								&nbsp;&nbsp;&nbsp;&nbsp;
-								<img src="/quiz/image/radio-unchecked.gif" id="img2-157" onclick="javascript: radioSelect('2', '157', '45-54');" width="18" class="quizCheckbox"> <span onclick="radioSelect('2', '157', '45-54');" class="quizCheckboxLabel">45-54</span>
-								<br><br>
-								<img src="/quiz/image/radio-unchecked.gif" id="img2-158" onclick="javascript: radioSelect('2', '158', '55-64');" width="18" class="quizCheckbox"> <span onclick="radioSelect('2', '158', '55-64');" class="quizCheckboxLabel">55-64</span>
-								&nbsp;&nbsp;&nbsp;&nbsp;
-								<img src="/quiz/image/radio-unchecked.gif" id="img2-159" onclick="javascript: radioSelect('2', '159', '65-74');" width="18" class="quizCheckbox"> <span onclick="radioSelect('2', '159', '65-74');" class="quizCheckboxLabel">65-74</span>
-								<br><br>
-								<img src="/quiz/image/radio-unchecked.gif" id="img2-160" onclick="javascript: radioSelect('2', '160', '75+');" width="18" class="quizCheckbox"> <span onclick="radioSelect('2', '160', '75+');" class="quizCheckboxLabel">75+</span>
-								
-          </td>
-        </tr>
+            </fieldset>
         
-          <tr id="trQuestionConsent" class="ConsentRow" style="display: none;">      	
-            <td colspan="3">
-              <input type="hidden" name="intAnswer-Consent" id="intAnswer-Consent" value="">
-              <div id="AdultConsent" style="display: none; padding-left: 50px;">
-                We would like to use your anonymous Healthy Eating Quiz™ responses for research purposes.
-                If you consent, your information will be stored securely and any identifiable information will be removed prior to analysis. Your information will remain confidential to the University of Newcastle researchers and will not be shared with any third party. Please refer to the Healthy Eating Quiz ™ Privacy Statement for more information.
-                Your decision is entirely voluntary. If you would prefer that your data not be used for research purposes, it will not affect your use of the Healthy Eating Quiz ™. 
-                <br><br>
-                <strong>Please select one of the following:</strong>
-                <br><br>
-                <img src="/quiz/image/radio-unchecked.gif" id="imgAdultConsent-Yes" onclick="javascript: radioSelect('AdultConsent', 'Yes', '1');" width="18" class="quizCheckbox"> 
-                <span onclick="radioSelect('AdultConsent', 'Yes', '1');" class="quizCheckboxLabel">I consent for my data to be de-identified and for this de-identified data to be used by the University of Newcastle for research purposes.</span>
-                <br><br>
-                <img src="/quiz/image/radio-unchecked.gif" id="imgAdultConsent-No" onclick="javascript: radioSelect('AdultConsent', 'No', '0');" width="18" class="quizCheckbox"> 
-                <span onclick="radioSelect('AdultConsent', 'No', '0');" class="quizCheckboxLabel">I do not consent for my data to be used by the University of Newcastle for research purposes.</span>
-              </div>
-              <div id="MinorConsent" style="display: none; padding-left: 50px;">
-                If you are a parent / carer / guardian who is providing consent on behalf of a minor (under the age of 18 years), you confirm that you have discussed the use of data with the minor.
-                <br><br>
-                <strong>Please select one of the following:</strong>
-                <br><br>
-                <img src="/quiz/image/radio-unchecked.gif" id="imgMinorConsent-Yes" onclick="javascript: radioSelect('MinorConsent', 'Yes', '1');" width="18" class="quizCheckbox"> 
-                <span onclick="radioSelect('MinorConsent', 'Yes', '1');" class="quizCheckboxLabel">As a parent / carer / guardian of a minor (under the age of 18 years), I consent for their data to be de-identified and for this de-identified data to be used by the University of Newcastle for research purposes.</span>
-                <br><br>
-                <img src="/quiz/image/radio-unchecked.gif" id="imgMinorConsent-No" onclick="javascript: radioSelect('MinorConsent', 'No', '0');" width="18" class="quizCheckbox"> 
-                <span onclick="radioSelect('MinorConsent', 'No', '0');" class="quizCheckboxLabel">As a parent / carer / guardian of a minor (under the age of 18 years), I do not consent for their data to be used by the University of Newcastle for research purposes.</span>
-                <br><br>
-                <span style="color: #F00;">If you are completing this quiz on behalf of your child, all questions from this point forward should be completed using your child’s information</span>
-              </div>
-            </td>
-          </tr>
+    </div>
+</div>
+</div>
+<div class="question-row clearfix ">
+ <div data-question-type="single_choice_vertical" class="question-container">
+
+    <div id="question-field-703283001" data-qnumber="2" data-question-id="703283001" class=" question-single-choice-radio qn question vertical">
         
-        <tr id="trQuestion3">      	
-          <td class="LabelCell questionNo"><a name="Q3" id="Q3">&nbsp;</a></td>
-          <td class="LabelCell questionName">
-            Is this the first time you are taking this quiz?     
-          </td>
-          <td>
-					
-						<input type="hidden" name="intAnswer-3" id="intAnswer-3" value="">
-						
-								<img src="/quiz/image/radio-unchecked.gif" id="img3-5" onclick="javascript: radioSelect('3', '5', '1');" width="18" class="quizCheckbox"> <span onclick="radioSelect('3', '5', '1');" class="quizCheckboxLabel">Yes</span>
-								&nbsp;&nbsp;&nbsp;&nbsp;
-								<img src="/quiz/image/radio-unchecked.gif" id="img3-6" onclick="javascript: radioSelect('3', '6', '0');" width="18" class="quizCheckbox"> <span onclick="radioSelect('3', '6', '0');" class="quizCheckboxLabel">No</span>
-								
-          </td>
-        </tr>
         
-        <tr id="trQuestion79">      	
-          <td class="LabelCell questionNo"><a name="Q79" id="Q79">&nbsp;</a></td>
-          <td class="LabelCell questionName">
-            Are you a vegetarian?     
-          </td>
-          <td>
-					
-						<input type="hidden" name="intAnswer-79" id="intAnswer-79" value="">
-						
-								<img src="/quiz/image/radio-unchecked.gif" id="img79-177" onclick="javascript: radioSelect('79', '177', '1');" width="18" class="quizCheckbox"> <span onclick="radioSelect('79', '177', '1');" class="quizCheckboxLabel">Yes</span>
-								&nbsp;&nbsp;&nbsp;&nbsp;
-								<img src="/quiz/image/radio-unchecked.gif" id="img79-178" onclick="javascript: radioSelect('79', '178', '0');" width="18" class="quizCheckbox"> <span onclick="radioSelect('79', '178', '0');" class="quizCheckboxLabel">No</span>
-								
-          </td>
-        </tr>
-        
-        <tr id="trQuestion4">      	
-          <td class="LabelCell questionNo"><a name="Q4" id="Q4">&nbsp;</a></td>
-          <td class="LabelCell questionName">
-            Height (Optional)     
-          </td>
-          <td>
-					
-						<input type="hidden" name="intAnswer-4" id="intAnswer-4" value="">
-            <img src="/quiz/image/radio-unchecked.gif" id="img4-a" onclick="javascript: radioSelect('4', 'a', 'cm'); document.getElementById('divHeightCM').style.display = 'block'; document.getElementById('divHeightFT').style.display = 'none';" width="18" class="quizCheckbox"> <span onclick="radioSelect('4', 'a', 'cm');  document.getElementById('divHeightCM').style.display = 'block'; document.getElementById('divHeightFT').style.display = 'none';" class="quizCheckboxLabel">centimetres</span>
-						&nbsp;&nbsp;<img src="/quiz/image/radio-unchecked.gif" id="img4-b" onclick="javascript: radioSelect('4', 'b', 'ft'); document.getElementById('divHeightCM').style.display = 'none'; document.getElementById('divHeightFT').style.display = 'block';" width="18" class="quizCheckbox"> <span onclick="radioSelect('4', 'b', 'ft');  document.getElementById('divHeightCM').style.display = 'none'; document.getElementById('divHeightFT').style.display = 'block';" class="quizCheckboxLabel">feet/inches</span>
-            <div id="divHeightCM" style="display: none; padding-top: 10px;">
-            	cm - <input type="text" name="strHeightCM" id="strHeightCM" value="" style="width: 50px;" maxlength="10">
+            <fieldset class=" question-fieldset" data-radio-button-group="">
+                
+                
+                <h4 id="question-title-703283001" class="question-title-container">
+                    <span class="required-asterisk notranslate">
+                            *
+                        </span>
+
+                    
+                        <span class="question-number notranslate">
+                            2<span class="question-dot">.</span>
+                        </span>
+                    
+                    
+                        <span class="user-generated notranslate">How many portions of milk and dairy foods (yogurt and cheese) do you eat or drink each day?</span>
+                    
+                </h4>
+                <div class="question-body clearfix notranslate ">
+            <div class="">
+        <div class="answer-option-cell">
+    <div data-sm-radio-button="" class="radio-button-container">
+        <input id="703283001_8063924259" name="703283001" type="radio" class="radio-button-input" value="8063924259">
+        <label data-sm-radio-button-label="" class="answer-label radio-button-label no-touch touch-sensitive clearfix" for="703283001_8063924259">
+            <span class="radio-button-display ">
+            </span>
+            <span class="radio-button-label-text question-body-font-theme user-generated">
+                0-1 portions a day
+                
+            </span>
+        </label>
+    </div>
+        </div>
+        <div class="answer-option-cell">
+    <div data-sm-radio-button="" class="radio-button-container">
+        <input id="703283001_8063924260" name="703283001" type="radio" class="radio-button-input" value="8063924260">
+        <label data-sm-radio-button-label="" class="answer-label radio-button-label no-touch touch-sensitive clearfix" for="703283001_8063924260">
+            <span class="radio-button-display ">
+            </span>
+            <span class="radio-button-label-text question-body-font-theme user-generated">
+                2-3 portions a day
+                
+            </span>
+        </label>
+    </div>
+        </div>
+                <div class="answer-option-cell">
+    <div data-sm-radio-button="" class="radio-button-container">
+        <input id="703283001_8063924259" name="703283001" type="radio" class="radio-button-input" value="8063924259">
+        <label data-sm-radio-button-label="" class="answer-label radio-button-label no-touch touch-sensitive clearfix" for="703283001_8063924259">
+            <span class="radio-button-display ">
+            </span>
+            <span class="radio-button-label-text question-body-font-theme user-generated">
+                4 or more portions a day
+                
+            </span>
+        </label>
+    </div>
+        </div>
             </div>
-            <div id="divHeightFT" style="display: none; padding-top: 10px;">
-            	ft - <input type="text" name="strHeightFT" id="strHeightFT" value="" style="width: 50px;" maxlength="10">
-            	&nbsp;&nbsp;in - <input type="text" name="strHeightIN" id="strHeightIN" value="" style="width: 50px;" maxlength="10">
-            </div>
-						
-          </td>
-        </tr>
+                </div>
+            </fieldset>
         
-        <tr id="trQuestion5">      	
-          <td class="LabelCell questionNo"><a name="Q5" id="Q5">&nbsp;</a></td>
-          <td class="LabelCell questionName">
-            Weight (Optional)     
-          </td>
-          <td>
-					
-						<input type="hidden" name="intAnswer-5" id="intAnswer-5" value="">
-            <img src="/quiz/image/radio-unchecked.gif" id="img5-a" onclick="javascript: radioSelect('5', 'a', 'kg'); document.getElementById('divWeightKG').style.display = 'block'; document.getElementById('divWeightLB').style.display = 'none';" width="18" class="quizCheckbox"> <span onclick="radioSelect('5', 'a', 'kg');  document.getElementById('divWeightKG').style.display = 'block'; document.getElementById('divWeightLB').style.display = 'none';" class="quizCheckboxLabel">kilograms</span>
-						&nbsp;&nbsp;<img src="/quiz/image/radio-unchecked.gif" id="img5-b" onclick="javascript: radioSelect('5', 'b', 'lb'); document.getElementById('divWeightKG').style.display = 'none'; document.getElementById('divWeightLB').style.display = 'block';" width="18" class="quizCheckbox"> <span onclick="radioSelect('5', 'b', 'lb');  document.getElementById('divWeightKG').style.display = 'none'; document.getElementById('divWeightLB').style.display = 'block';" class="quizCheckboxLabel">pounds</span>
-            <div id="divWeightKG" style="display: none; padding-top: 10px;">
-            	kg - <input type="text" name="strWeightKG" id="strWeightKG" value="" style="width: 50px;" maxlength="10">
+    </div>
+</div>
+</div>
+      <div class="question-row clearfix ">
+      <div data-question-type="single_choice_vertical" class="question-container">
+    <div id="question-field-703283304" data-qnumber="3" data-question-id="703283304" class=" question-single-choice-radio qn question vertical">        
+            <fieldset class=" question-fieldset" data-radio-button-group="">   
+                <h4 id="question-title-703283304" class="question-title-container">
+                    <span class="required-asterisk notranslate">
+                            *
+                        </span>
+                        <span class="question-number notranslate">
+                            3<span class="question-dot">.</span>
+                        </span>  
+                        <span class="user-generated notranslate">Do you eat at least five fruits and vegetables each day?</span>                   
+                </h4>
+                <div class="question-body clearfix notranslate ">
+                                <div class="">
+        
+        <div class="answer-option-cell">
+
+    <div data-sm-radio-button="" class="radio-button-container">
+        <input id="703283304_8063742745" name="703283304" type="radio" class="radio-button-input" value="8063742745">
+        <label data-sm-radio-button-label="" class="answer-label radio-button-label no-touch touch-sensitive clearfix" for="703283304_8063742745">
+            <span class="radio-button-display ">
+            </span>
+            <span class="radio-button-label-text question-body-font-theme user-generated">
+                Yes
+                
+            </span>
+        </label>
+    </div>
+        </div>
+       <div class="answer-option-cell">            
+    <div data-sm-radio-button="" class="radio-button-container">
+        <input id="703283304_8063742746" name="703283304" type="radio" class="radio-button-input" value="8063742746">
+        <label data-sm-radio-button-label="" class="answer-label radio-button-label no-touch touch-sensitive clearfix" for="703283304_8063742746">
+            <span class="radio-button-display ">
+            </span>
+            <span class="radio-button-label-text question-body-font-theme user-generated">
+                No                
+            </span>
+        </label>
+    </div>
+        </div>
             </div>
-            <div id="divWeightLB" style="display: none; padding-top: 10px;">
-            	lb - <input type="text" name="strWeightLB" id="strWeightLB" value="" style="width: 50px;" maxlength="10">
+                </div>
+            </fieldset>
+    </div>
+</div>
+</div>
+      <div class="question-row clearfix ">
+      <div data-question-type="single_choice_vertical" class="question-container">
+    <div id="question-field-703283858" data-qnumber="4" data-question-id="703283858" class=" question-single-choice-radio qn question vertical">        
+            <fieldset class=" question-fieldset" data-radio-button-group="">
+                
+                
+                <h4 id="question-title-703283858" class="question-title-container">
+                    <span class="required-asterisk notranslate">
+                            *
+                        </span>
+                 
+                        <span class="question-number notranslate">
+                            4<span class="question-dot">.</span>
+                        </span>
+                    
+                    
+                        <span class="user-generated notranslate">How many portions from the meat, fish and alternatives, such as eggs, beans and other pulses, do you eat each day?</span>
+                    
+                </h4>
+                <div class="question-body clearfix notranslate ">
+                    
+    
+    
+        
+            <div class="">
+        
+        <div class="answer-option-cell">
+
+    <div data-sm-radio-button="" class="radio-button-container">
+        <input id="703283858_8063748645" name="703283858" type="radio" class="radio-button-input" value="8063748645">
+        <label data-sm-radio-button-label="" class="answer-label radio-button-label no-touch touch-sensitive clearfix" for="703283858_8063748645">
+            <span class="radio-button-display ">
+            </span>
+            <span class="radio-button-label-text question-body-font-theme user-generated">
+                1 portion or less a day
+                
+            </span>
+        </label>
+    </div>
+
+        </div>
+        
+    
+        
+        <div class="answer-option-cell">
+
+    <div data-sm-radio-button="" class="radio-button-container">
+        <input id="703283858_8063748646" name="703283858" type="radio" class="radio-button-input" value="8063748646">
+        <label data-sm-radio-button-label="" class="answer-label radio-button-label no-touch touch-sensitive clearfix" for="703283858_8063748646">
+            <span class="radio-button-display ">
+            </span>
+            <span class="radio-button-label-text question-body-font-theme user-generated">
+                2 portions a day or more
+                
+            </span>
+        </label>
+    </div>
+
+        </div>
+        
+            </div>
+                </div>
+            </fieldset>
+        
+    </div>
+</div>
+</div>
+<div class="question-row clearfix 
+                   "><div data-question-type="single_choice_vertical" class="question-container ">
+
+    <div id="question-field-703284274" data-qnumber="5" data-question-id="703284274" class=" question-single-choice-radio qn question vertical">
+        
+        
+            <fieldset class=" question-fieldset" data-radio-button-group="">
+                
+                
+                <h4 id="question-title-703284274" class="question-title-container">
+                    <span class="required-asterisk notranslate">
+                            *
+                        </span>
+
+                    
+                        <span class="question-number notranslate">
+                            5<span class="question-dot">.</span>
+                        </span>
+                    
+                    
+                        <span class="user-generated notranslate">How many high fat, high sugar snacks would you eat in a week such as cakes, biscuits, crisps, chocolate bars, sweets? </span>
+                    
+                </h4>
+                <div class="question-body clearfix notranslate ">
+                    
+    
+    
+        
+            <div class="">
+        
+        <div class="answer-option-cell">
+    <div data-sm-radio-button="" class="radio-button-container">
+        <input id="703284274_8063752087" name="703284274" type="radio" class="radio-button-input" value="8063752087">
+        <label data-sm-radio-button-label="" class="answer-label radio-button-label no-touch touch-sensitive clearfix" for="703284274_8063752087">
+            <span class="radio-button-display ">
+            </span>
+            <span class="radio-button-label-text question-body-font-theme user-generated">
+                Everyday
+                
+            </span>
+        </label>
+    </div>
+
+        </div>
+        
+    
+        
+        <div class="answer-option-cell">
+
+    <div data-sm-radio-button="" class="radio-button-container">
+        <input id="703284274_8063752088" name="703284274" type="radio" class="radio-button-input" value="8063752088">
+        <label data-sm-radio-button-label="" class="answer-label radio-button-label no-touch touch-sensitive clearfix" for="703284274_8063752088">
+            <span class="radio-button-display ">
+            </span>
+            <span class="radio-button-label-text question-body-font-theme user-generated">
+                3-4 days a week  
+            </span>
+        </label>
+    </div>
+
+        </div>
+        
+     <div class="answer-option-cell">
+    <div data-sm-radio-button="" class="radio-button-container">
+        <input id="703284274_8063752087" name="703284274" type="radio" class="radio-button-input" value="8063752087">
+        <label data-sm-radio-button-label="" class="answer-label radio-button-label no-touch touch-sensitive clearfix" for="703284274_8063752087">
+            <span class="radio-button-display ">
+            </span>
+            <span class="radio-button-label-text question-body-font-theme user-generated">
+                once a week
+                
+            </span>
+        </label>
+    </div>
+
+        </div>
+        
+            </div>
+
+                </div>
+            </fieldset>
+        
+    </div>
+</div>
+</div>
+<div class="question-row clearfix ">
+<div data-question-type="single_choice_vertical" class="question-container">
+
+    <div id="question-field-703284841" data-qnumber="6" data-question-id="703284841" class=" question-single-choice-radio qn question vertical">
+        
+        
+            <fieldset class=" question-fieldset" data-radio-button-group="">
+                
+                
+                <h4 id="question-title-703284841" class="question-title-container">
+                    <span class="required-asterisk notranslate">
+                            *
+                        </span>
+
+                    
+                        <span class="question-number notranslate">
+                            6<span class="question-dot">.</span>
+                        </span>
+                    
+                    
+                        <span class="user-generated notranslate">How often would you eat a takeaway meal?</span>
+                    
+                </h4>
+                <div class="question-body clearfix notranslate ">
+                    
+    
+    
+        
+            <div class="">
+        
+        <div class="answer-option-cell">
+
+    <div data-sm-radio-button="" class="radio-button-container">
+        <input id="703284841_8063757268" name="703284841" type="radio" class="radio-button-input" value="8063757268">
+        <label data-sm-radio-button-label="" class="answer-label radio-button-label no-touch touch-sensitive clearfix" for="703284841_8063757268">
+            <span class="radio-button-display ">
+            </span>
+            <span class="radio-button-label-text question-body-font-theme user-generated">
+                Rarely
+                
+            </span>
+        </label>
+    </div>
+
+        </div>
+        
+    
+        
+        <div class="answer-option-cell">
+    <div data-sm-radio-button="" class="radio-button-container">
+        <input id="703284841_8063757269" name="703284841" type="radio" class="radio-button-input" value="8063757269">
+        <label data-sm-radio-button-label="" class="answer-label radio-button-label no-touch touch-sensitive clearfix" for="703284841_8063757269">
+            <span class="radio-button-display ">
+            </span>
+            <span class="radio-button-label-text question-body-font-theme user-generated">
+                Once a week
+                
+            </span>
+        </label>
+    </div>
+
+        </div>
+        
             </div>
             
-          </td>
-        </tr>
-        
-        <tr id="trQuestion77">      	
-          <td class="LabelCell questionNo"><a name="Q77" id="Q77">&nbsp;</a></td>
-          <td class="LabelCell questionName">
-            How do you eat your main meal? (Optional)     
-          </td>
-          <td>
-					
-						<input type="hidden" name="intAnswer-77" id="intAnswer-77" value="">
-						
-								<img src="/quiz/image/radio-unchecked.gif" id="img77-173" onclick="javascript: radioSelect('77', '173', 'By yourself');" width="18" class="quizCheckbox"> <span onclick="radioSelect('77', '173', 'By yourself');" class="quizCheckboxLabel">By yourself</span>
-								&nbsp;&nbsp;&nbsp;&nbsp;
-								<img src="/quiz/image/radio-unchecked.gif" id="img77-174" onclick="javascript: radioSelect('77', '174', 'With 1 other person');" width="18" class="quizCheckbox"> <span onclick="radioSelect('77', '174', 'With 1 other person');" class="quizCheckboxLabel">With 1 other person</span>
-								&nbsp;&nbsp;&nbsp;&nbsp;
-								<img src="/quiz/image/radio-unchecked.gif" id="img77-175" onclick="javascript: radioSelect('77', '175', 'With 2 or more other people');" width="18" class="quizCheckbox"> <span onclick="radioSelect('77', '175', 'With 2 or more other people');" class="quizCheckboxLabel">With 2 or more other people</span>
-								
-          </td>
-        </tr>
-        
-        <tr id="trQuestion84">      	
-          <td class="LabelCell questionNo"><a name="Q84" id="Q84">&nbsp;</a></td>
-          <td class="LabelCell questionName">
-            Country you live in?     
-          </td>
-          <td>
-					
-            <select data-placeholder="-- Select Country --" class="" name="intAnswer-84" id="intAnswer-84" title="Country" style="width: 200px;">
+            <div class="answer-option-cell">
+    <div data-sm-radio-button="" class="radio-button-container">
+        <input id="703284841_8063757269" name="703284841" type="radio" class="radio-button-input" value="8063757269">
+        <label data-sm-radio-button-label="" class="answer-label radio-button-label no-touch touch-sensitive clearfix" for="703284841_8063757269">
+            <span class="radio-button-display ">
+            </span>
+            <span class="radio-button-label-text question-body-font-theme user-generated">
+                4-5 times a week
                 
-             
-                  
-            </select>
-						
-          </td>
-        </tr>
+            </span>
+        </label>
+    </div>
+
+        </div>
+            </div>
+                </div>
+            </fieldset>
+    </div>
+</div>
+</div>
+<br>
+<script>
+function myFunction(){
+	alert("Submit successful!");
+}
+</script>
+<input type="button" onclick="myFunction()" value="Submit" />
+            <!-- <div class="survey-submit-actions center-text clearfix">
+                    <button type="submit" class="btn small next-button survey-page-button user-generated notranslate">
+                        Submit                        
+                    </button>
+            </div> -->
+	    <input type="hidden" id="survey_data" name="survey_data" value="4FoTYerhlqpl9PSGmuD5IdEtRD9VOIKdD4fnIG6QBf5W6wgmsHHKXpb6eWxtLSRTqngDRKyCWoRQchcu9wrm_2BqqbbrrY_2BOF2Sz7onwcN5z1jXdUcjPVA64nHP8iEOmWSC8lQewzi5wtNfxHGHGFl7nJ_2B2cxu0Rsfm1CqyMhAiB29q_2FsHpmZOiUdXTI6R6ZYU4_2BHkUaHnC3gucAUhYwDaaARa9GakenVe6zkCDJMdO4jvcvf05DQcj9i26Xo25tZfgjb3Hec38gzQlJ42e0sw62_2FOZPiv5dRhb8ggx_2BLyuykjkzXgelAvxWQyElSiBEJ21sEH1c_2BnDoBNAd45FmCrsxs_2BqE7sPIVV_2Fnw0VyWOThDTt8VqFovYAOouf_2Fqoh4v8stDe7N3a5Gr_2FGHfyEP1sb0hBAQkLEaky7zr9IlJ6dHRp_2FnROsgOszDdh8_2F_2FW8NIF">
+	    <input type="hidden" id="is_previous" name="is_previous" value="false">
+
+        </form>
+    </section>
+    
+    
+        <footer class="survey-footer bottom">
+
+<div class="standard-footer notranslate">
+    <p class="survey-footer-title ">
+        Powered by <a target="_blank" href="https://www.surveymonkey.com?ut_source=survey_poweredby_home" class="footer-brand-name survey-footer-link"><img src="https://secure.surveymonkey.com/assets/responseweb/smlib.surveytemplates/4.1.30/assets/sm_logo_footer.svg" alt="SurveyMonkey" class="responsive-logo"></a>
+    </p>
+
+    See how easy it is to <a target="_blank" class="survey-footer-link" href="https://www.surveymonkey.com/mp/take-a-tour/?ut_source=survey_poweredby_howitworks">create a survey</a>.
+</div>    
+        </footer>
+  
+</article>
+
+<div class="survey-under-footer-ie-buffer"></div>
+
+
         
-        <tr id="trQuestion78">      	
-          <td class="LabelCell questionNo"><a name="Q78" id="Q78">&nbsp;</a></td>
-          <td class="LabelCell questionName">
-            Postcode you live at? (Optional)     
-          </td>
-          <td>
-					
-						<input type="text" name="intAnswer-78" id="intAnswer-78" value="" style="width: 75px;">
-						
-          </td>
-        </tr>
-        
-    </tbody></table>
-    <br><br>
-    <table class="QuestionTable">
-    	<tbody><tr>
-      	<td class="leftCell">
-        	
-        </td>
-      	<td class="middleCell">
-        	
-        </td>
-       	<td class="rightCell">
-        	<input type="hidden" name="strMandatory1" id="strMandatory1" value="1,2,Consent,3,79,84">
-        	
-            <input type="button" class="button" value="Next" id="btnNext1" onclick="if (sectionValidate('1')) { switchContentTab('2', ''); } ">
-        	
-        </td>
-      </tr>
-    </tbody>
-    </table>
-  <br>
-</div>  
-                        </div>
-                        </form>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>			  
+    <div style="display:none;">
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-56526-1', 'auto');
+ga('send', 'pageview');
+</script>
+</div>
+
+<noscript>&lt;style type="text/css" media="all"&gt;form {display:none;} &lt;/style&gt;&lt;div style="text-align:center;"&gt;Javascript is required for this site to function, please enable.&lt;/div&gt;</noscript>
+  
+</body>			  
     </jsp:body>
 </x:page>
