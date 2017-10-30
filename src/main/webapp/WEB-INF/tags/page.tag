@@ -39,7 +39,7 @@
 				</button>
 				<a class="navbar-brand" href="${pageContext.request.contextPath}/">
 					<img class="logo" src="${pageContext.request.contextPath}/resources/img/logo.png"/>
-					<span class="site-title">Personal Health Assistant</span>
+					<span class="site-title">Doctor Online</span>
 				</a>
 			</div>
 	        <div id="navbar" class="navbar-collapse collapse">
