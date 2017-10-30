@@ -45,19 +45,19 @@
 	        <div id="navbar" class="navbar-collapse collapse">
 	          <ul class="nav navbar-nav navbar-left">
 					<li><a href="${pageContext.request.contextPath}/">Home</a></li>
-					<li><a href="${pageContext.request.contextPath}/forum"> Discussion Board </a></li> 
+					<li><a href="${pageContext.request.contextPath}/forum"> Discussion</a></li> 
 <%-- 					<li><a href="${pageContext.request.contextPath}/chat"> Chat</a></li> --%>
-<%-- 					<li><a href="${pageContext.request.contextPath}/wiki"> Wiki </a></li> --%>
+					<li><a href="${pageContext.request.contextPath}/health-report">Health Report </a></li> 
 					<li><a href="${pageContext.request.contextPath}/quiz/quiz_user"> Quiz </a></li>
 					<li><a href="${pageContext.request.contextPath}/TrackHealth/"> TrackHealth </a></li>					 
 					<li><a href="${pageContext.request.contextPath}/announcement">Announcement</a></li>
 					<li><a href="${pageContext.request.contextPath}/medicine">Medicine</a></li>
-					<li><a href="${pageContext.request.contextPath}/logout">Logout</a></li>
-					<li><a href="${pageContext.request.contextPath}/#">${pageContext.request.userPrincipal.name }</a></li>
-	          </ul>
-<!-- 	          <form class="navbar-form navbar-right"> -->
-<!-- 	            <input type="text" class="form-control" placeholder="Search..."> -->
-<!-- 	          </form> -->
+<%-- 					<li><a href="#">${pageContext.request.userPrincipal.name }</a>   |  <a href="${pageContext.request.contextPath}/logout">Logout</a>   	          --%>
+<!-- 			</li> -->
+	          </ul> 
+<!-- 			 <div class="navbar-form navbar-right" style="color:fff;">   	              -->
+<%-- 					  ${pageContext.request.userPrincipal.name }  |  <a href="${pageContext.request.contextPath}/logout">Logout</a>   	          --%>
+<!-- 			   </div>   -->
 	        </div>
 		</div>
 	</nav>
@@ -77,10 +77,14 @@
 <!-- 				<ul class="nav nav-sidebar"> -->
 <!-- 				</ul> -->
 <!-- 			</div> <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main"> -->
-			<div class="col-sm-12 col-md-12 main">
-				<!--  custom content begin================================================== -->
-				
-				<!--  custom content end================================================== -->
+
+			<div class="col-sm-12 col-md-12 main"> 
+			 <div class="navbar-form navbar-right">  
+			  		  <div class="avatar"> 
+			                <img src="${pageContext.request.contextPath}/api/user/current/icon"  class="media-photo"/>  		             
+					  ${pageContext.request.userPrincipal.name }  |  <a href="${pageContext.request.contextPath}/logout">Logout</a>              
+			           </div>  	         
+			   </div>  
 			</div>
 			<jsp:doBody />
 		</div>

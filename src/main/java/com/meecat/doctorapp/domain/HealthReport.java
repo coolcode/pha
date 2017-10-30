@@ -7,12 +7,24 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 
 @Entity
 @Table
-public class Wiki extends BaseEntity { 
+public class HealthReport extends BaseEntity { 
 	@Column
     private String title;
 
 	@Column
     private String content;
+
+	@OneToOne(fetch=FetchType.EAGER)
+    @JoinColumn(name = "userId")
+    private User user; 
+	
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
 
 	@OneToOne(fetch=FetchType.EAGER)
     @JoinColumn(name = "createUserId") 
@@ -22,7 +34,7 @@ public class Wiki extends BaseEntity {
     @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss", timezone = "UTC")
     private LocalDateTime createDate;      
 
-    public Wiki(){
+    public HealthReport(){
     	createDate = LocalDateTime.now();
     }
     

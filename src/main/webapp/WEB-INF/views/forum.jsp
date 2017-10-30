@@ -10,7 +10,7 @@
 		<script src="${pageContext.request.contextPath}/resources/js/app/forum.js"></script> 
     </jsp:attribute>
 	<jsp:body>	
-	<h1 class="text-center">Discussion Board</h1>
+	<h1 class="text-center">Discussion</h1>
 	<div ng-app="app" ng-controller="ForumController">					
 		<div class="panel panel-info">
 			<div class="panel-heading">Welcome to PHA discussion board!</div>

@@ -16,7 +16,7 @@ angular.module('app', ['angular-loading-bar'])
 	  $scope.reloadWikis = function(){
 		  $http({
 			  method: 'GET',
-			  url: $.context + '/api/wiki/top/10' 
+			  url: $.context + '/api/health-report/current' 
 			}).then(function successCallback(r) {  
 				 $scope.wikis = r.data; 
 			  }, function errorCallback(r) { 

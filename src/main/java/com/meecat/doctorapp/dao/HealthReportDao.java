@@ -9,33 +9,33 @@ import org.springframework.stereotype.Repository;
 import com.meecat.doctorapp.domain.*;
 
 @Repository
-public class WikiDao {
+public class HealthReportDao {
 
 	@PersistenceContext
 	private EntityManager entityManger;
 
-    public void save(Wiki entity) {
+    public void save(HealthReport entity) {
     	entityManger.merge(entity); 
     }
     
-    public Wiki get(int id) {
-    	return entityManger.find(Wiki.class, id); 
+    public HealthReport get(int id) {
+    	return entityManger.find(HealthReport.class, id); 
 	}
 
     public void delete(int id) {
-    	Wiki entity  = get(id);
+    	HealthReport entity  = get(id);
     	entityManger.remove(entity); 
     }
     
-	public List<Wiki> list() {
+	public List<HealthReport> list() {
 		return entityManger
-				.createQuery("from Wiki order by id desc", Wiki.class)
+				.createQuery("from HealthReport order by id desc", HealthReport.class)
 				.getResultList();    	
 	}  
 	
-	public List<Wiki> top(int n) {
+	public List<HealthReport> top(int n) {
 		return entityManger
-				.createQuery("from Wiki order by id desc", Wiki.class)
+				.createQuery("from HealthReport order by id desc", HealthReport.class)
 				.setMaxResults(n)
 				.getResultList();    	
 	} 
