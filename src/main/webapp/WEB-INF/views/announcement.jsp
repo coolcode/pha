@@ -40,14 +40,14 @@
 				    <label>Content</label>
 				     <div id="summernote"></div> 
 				  </div> 
-				 <div class="form-check">
-					  <label class="form-check-label">
-					  <!-- checkbox of send email to users -->
+				 <!-- <div class="form-check"> -->
+					<!-- <!--   <label class="form-check-label">
+					  checkbox of send email to users
 					    <input class="form-check-input" type="checkbox" value="" ng-model="announcement.ifSendEmail"
 					    ng-true-value="true" ng-false-value="false">
 					    Send announcement via Email to all users.
-					  </label>
-				</div>
+					  </label> -->
+				<!-- </div> -->
 				  <br><button type="button" class="btn btn-default" ng-click="submitAnnouncement()">Post</button>	 
 			</div> 
 		</div>		  
