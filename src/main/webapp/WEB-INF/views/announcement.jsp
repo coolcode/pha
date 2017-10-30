@@ -1,6 +1,5 @@
-<%@ page session="false" contentType="text/html" pageEncoding="UTF-8"%>
+<%@ page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib prefix="x" tagdir="/WEB-INF/tags"%>
-<!-- Main page of Announcement -->
 <x:page> 
     <jsp:attribute name="css">
 		<link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.8/summernote.css" rel="stylesheet">
@@ -22,7 +21,7 @@
 					<td width=300px;><a href="${pageContext.request.contextPath}/announcement/{{x.id}}">{{x.title}}</a></td>
 					<!-- <td ng-bind-html= "x.content"><br></td> -->		
 				  	<td>{{x.createDate}}</td>
-				  	<td ng-show="x.creator.id==${currentUser.id}">
+				  	<td>
 				  		<a href="javascript:;" ng-click="editAnnouncement(x)"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>
 				  		<a href="javascript:;" ng-click="removeAnnouncement(x)" ><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
 				  	

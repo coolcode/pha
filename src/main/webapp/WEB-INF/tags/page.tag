@@ -46,10 +46,10 @@
 	          <ul class="nav navbar-nav navbar-left">
 					<li><a href="${pageContext.request.contextPath}/">Home</a></li>
 					<li><a href="${pageContext.request.contextPath}/forum"> Discussion</a></li> 
-<%-- 					<li><a href="${pageContext.request.contextPath}/chat"> Chat</a></li> --%>
+					<li><a href="${pageContext.request.contextPath}/intake"> Intake</a></li> 
 					<li><a href="${pageContext.request.contextPath}/health-report">Health Report </a></li> 
 					<li><a href="${pageContext.request.contextPath}/quiz/quiz_user"> Quiz </a></li>
-					<li><a href="${pageContext.request.contextPath}/TrackHealth/"> TrackHealth </a></li>					 
+					<li><a href="${pageContext.request.contextPath}/TrackHealth/"> Track Health </a></li>					 
 					<li><a href="${pageContext.request.contextPath}/announcement">Announcement</a></li>
 					<li><a href="${pageContext.request.contextPath}/medicine">Medicine</a></li>
 <%-- 					<li><a href="#">${pageContext.request.userPrincipal.name }</a>   |  <a href="${pageContext.request.contextPath}/logout">Logout</a>   	          --%>
