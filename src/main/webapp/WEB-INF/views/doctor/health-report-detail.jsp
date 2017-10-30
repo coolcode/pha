@@ -1,7 +1,7 @@
 <%@ page session="false" contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib prefix="x" tagdir="/WEB-INF/tags"%> 
 
-<x:page>    
+<x:base>    
 	<jsp:attribute name="script">	
     </jsp:attribute>
 	<jsp:body>	 
@@ -19,4 +19,4 @@
 				</div>
 			</div> 
     </jsp:body>
-</x:page>
+</x:base>

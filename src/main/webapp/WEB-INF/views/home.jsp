@@ -23,10 +23,10 @@
 				</div>
 				<div class="col-xs-12 col-sm-6 col-md-6">				
 					<div class="panel panel-info">
-						<div class="panel-heading">Health Reports</div>
+						<div class="panel-heading">Announcements</div>
 						<ul class="list-group">
 						  <li class="list-group-item" ng-repeat="x in wikis"><a
-								href="${pageContext.request.contextPath}/health-report/{{x.id}}" target="_blank">{{x.title | limitTo:50}}</a></li> 
+								href="${pageContext.request.contextPath}/announcement/{{x.id}}" target="_blank">{{x.title | limitTo:50}}</a></li> 
 						</ul> 
 					</div>
 				</div>	
