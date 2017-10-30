@@ -36,7 +36,7 @@ public class AdminController {
 	private static final Logger logger = LoggerFactory.getLogger(AdminController.class);
  
 
-	@RequestMapping("/user/list")
+	@RequestMapping("/user")
 	public String list(Model model) {
 		return "/admin/user/list";
 	}	 

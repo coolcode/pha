@@ -8,7 +8,7 @@
  
 	<jsp:body>	
 	
-		<div ng-app="app" ng-controller="HomeController">
+		<div ng-controller="HomeController">
 			<h1 class="text-center">Home</h1> 
 			<p><img src="http://res.cloudinary.com/yopo/image/upload/v1508995517/doctoronline/banner.jpg" style="width:100%" class="rounded"><br></p>
 			<div class="row">	

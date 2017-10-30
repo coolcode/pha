@@ -15,18 +15,18 @@ import com.meecat.doctorapp.domain.*;
 
 @Controller
 @Transactional
-@RequestMapping("/intake")
-public class IntakeController {
+@RequestMapping("/my-health-report")
+public class MyHealthReportController {
 	
-	private static final Logger logger = LoggerFactory.getLogger(IntakeController.class); 
+	private static final Logger logger = LoggerFactory.getLogger(MyHealthReportController.class); 
 
-	@Autowired
-	private UserService userService; 
 
 	@GetMapping("")
-	public String index(Model model) { 
-		return "doctor/intake";
+	public String index(Model model) {
+		logger.info("my-health-report");  
+		
+		return "user/health-report";
 	} 	
- 
+
 	
 }

@@ -26,7 +26,7 @@
 	<jsp:invoke fragment="css" />
 </head>
 
-<body>
+<body  ng-app="app" >
 	<nav class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
@@ -43,15 +43,19 @@
 				</a>
 			</div>
 	        <div id="navbar" class="navbar-collapse collapse">
-	          <ul class="nav navbar-nav navbar-left">
-					<li><a href="${pageContext.request.contextPath}/">Home</a></li>
-					<li><a href="${pageContext.request.contextPath}/forum"> Discussion</a></li> 
-					<li><a href="${pageContext.request.contextPath}/intake"> Intake</a></li> 
-					<li><a href="${pageContext.request.contextPath}/health-report">Health Report </a></li> 
-					<li><a href="${pageContext.request.contextPath}/quiz/quiz_user"> Quiz </a></li>
-					<li><a href="${pageContext.request.contextPath}/TrackHealth/"> Track Health </a></li>					 
-					<li><a href="${pageContext.request.contextPath}/announcement">Announcement</a></li>
-					<li><a href="${pageContext.request.contextPath}/medicine">Medicine</a></li>
+	          <ul class="nav navbar-nav navbar-left" ng-controller="NavbarController">
+					<li ><a href="${pageContext.request.contextPath}/">Home</a></li>
+					<li ><a href="${pageContext.request.contextPath}/forum"> Discussion</a></li> 
+					<li ng-show="user.role=='ROLE_USER'"><a href="${pageContext.request.contextPath}/my-intake">My Intake</a></li> 
+					<li ng-show="user.role=='ROLE_USER'"><a href="${pageContext.request.contextPath}/my-health-report">My Health Report </a></li> 
+					<li ng-show="user.role=='ROLE_USER'"><a href="${pageContext.request.contextPath}/quiz/quiz_user"> Quiz </a></li>
+					<li ng-show="user.role=='ROLE_USER'"><a href="${pageContext.request.contextPath}/TrackHealth/"> Track Health </a></li>	
+					<li ng-show="user.role=='ROLE_DOCTOR'"><a href="${pageContext.request.contextPath}/intake">User Intake</a></li> 
+					<li ng-show="user.role=='ROLE_DOCTOR'"><a href="${pageContext.request.contextPath}/health-report">Health Report </a></li> 
+					<li ng-show="user.role=='ROLE_DOCTOR'"><a href="${pageContext.request.contextPath}/quiz/quiz_user"> Quiz </a></li>				 
+					<li ng-show="user.role=='ROLE_ADMIN'"><a href="${pageContext.request.contextPath}/announcement">Announcement</a></li>					 
+					<li ng-show="user.role=='ROLE_ADMIN'"><a href="${pageContext.request.contextPath}/admin/user">User</a></li>
+					<li ng-show="user.role=='ROLE_ADMIN'"><a href="${pageContext.request.contextPath}/medicine">Medicine</a></li>
 <%-- 					<li><a href="#">${pageContext.request.userPrincipal.name }</a>   |  <a href="${pageContext.request.contextPath}/logout">Logout</a>   	          --%>
 <!-- 			</li> -->
 	          </ul> 
@@ -109,6 +113,7 @@
 
 	<!--  custom scripts ================================================== -->
 	<jsp:invoke fragment="script" />
+	<script src="${pageContext.request.contextPath}/resources/js/app/navbar.js"></script>	
 
 </body>
 </html>

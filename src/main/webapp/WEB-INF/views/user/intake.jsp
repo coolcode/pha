@@ -9,7 +9,7 @@
     </jsp:attribute>
 	<jsp:body>	
 	<h1 class="text-center">Daily Intake</h1>
-	<div ng-app="app" ng-controller="IntakeController">					
+	<div ng-app="app" ng-controller="MyIntakeController">					
 		<div class="panel panel-info">
 			<div class="panel-heading"></div>
 			<table class="table table-condensed">

@@ -1,5 +1,5 @@
 angular.module('app', ['angular-loading-bar'])
-  .controller('IntakeController',['$scope', '$http', function($scope, $http) {
+  .controller('MyIntakeController',['$scope', '$http', function($scope, $http) {
 	  $scope.entity = {};
 	  $scope.entityList = []; 
 	  
@@ -46,4 +46,22 @@ angular.module('app', ['angular-loading-bar'])
 		   }); 
 	  }
  
+  }])
+  .controller('IntakeController',['$scope', '$http', function($scope, $http) {
+	  $scope.entity = {};
+	  $scope.entityList = []; 
+	  
+	  $scope.reload = function(){
+		  $http({
+			  method: 'GET',
+			  url: $.context + '/api/intake/all' 
+			}).then(function successCallback(r) { 
+				 $scope.entity = {};
+				 $scope.entityList = r.data; 
+			  }, function errorCallback(r) { 
+		   }); 
+	  }
+	    
+	  
+	  $scope.reload(); 
   }]);

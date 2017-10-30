@@ -31,7 +31,7 @@ public class HealthReportController {
 		logger.info("health-report"); 
 		model.addAttribute("currentUser", userService.getCurrentUser() );		 
 		
-		return "health-report/health-report";
+		return "doctor/health-report";
 	} 	
 
 	@GetMapping("/{id}")
@@ -40,7 +40,7 @@ public class HealthReportController {
 		model.addAttribute("report", report );
 		model.addAttribute("currentUser", userService.getCurrentUser() );
 		
-		return "health-report/health-report-detail";
+		return "doctor/health-report-detail";
 	} 
 	
 }
