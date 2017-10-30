@@ -64,8 +64,8 @@
 			            <div><input type="submit" class="btn btn-default" value="Sign In" /></div>
 			        </form>	
  
-			          <hr/>  
-			          <a href="${pageContext.request.contextPath}/register">Register</a>
+<!-- 			          <hr/>   -->
+<%-- 			          <a href="${pageContext.request.contextPath}/register">Register</a> --%>
 			          
 			          <div id="status" class="alert alert-danger" role="alert" style="display:none;"></div>
 					

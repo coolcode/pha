@@ -49,14 +49,14 @@
 					<li ng-show="user.role=='ROLE_USER'"><a href="${pageContext.request.contextPath}/my-intake">My Intake</a></li> 
 					<li ng-show="user.role=='ROLE_USER'"><a href="${pageContext.request.contextPath}/my-health-report">My Health Report </a></li> 
 					<li ng-show="user.role=='ROLE_USER'"><a href="${pageContext.request.contextPath}/quiz/quiz_user"> Quiz </a></li>
-					<li ng-show="user.role=='ROLE_USER'"><a href="${pageContext.request.contextPath}/TrackHealth/"> Track Health </a></li>	
+<%-- 					<li ng-show="user.role=='ROLE_USER'"><a href="${pageContext.request.contextPath}/TrackHealth/"> Track Health </a></li>	 --%>
 					<li ng-show="user.role=='ROLE_DOCTOR'"><a href="${pageContext.request.contextPath}/intake">User Intake</a></li> 
 					<li ng-show="user.role=='ROLE_DOCTOR'"><a href="${pageContext.request.contextPath}/health-report">Health Report </a></li> 
 					<li ng-show="user.role=='ROLE_DOCTOR'"><a href="${pageContext.request.contextPath}/quiz/quiz_user"> Quiz </a></li>				 
 					<li ng-show="user.role=='ROLE_ADMIN'"><a href="${pageContext.request.contextPath}/announcement">Announcement</a></li>					 
 					<li ng-show="user.role=='ROLE_ADMIN'"><a href="${pageContext.request.contextPath}/admin/user">User</a></li>
-					<li ng-show="user.role=='ROLE_ADMIN'"><a href="${pageContext.request.contextPath}/medicine">Medicine</a></li>
-<%-- 					<li><a href="#">${pageContext.request.userPrincipal.name }</a>   |  <a href="${pageContext.request.contextPath}/logout">Logout</a>   	          --%>
+	<%-- 				<li ng-show="user.role=='ROLE_ADMIN'"><a href="${pageContext.request.contextPath}/medicine">Medicine</a></li>
+					<li><a href="#">${pageContext.request.userPrincipal.name }</a>   |  <a href="${pageContext.request.contextPath}/logout">Logout</a>   	          --%>
 <!-- 			</li> -->
 	          </ul> 
 <!-- 			 <div class="navbar-form navbar-right" style="color:fff;">   	              -->

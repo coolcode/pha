@@ -1,7 +1,7 @@
 <%@ page session="false" contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib prefix="x" tagdir="/WEB-INF/tags"%>
 <!-- Main page of Announcement -->
-<x:page> 
+<x:base> 
     <jsp:attribute name="css">
     </jsp:attribute> 
     <jsp:attribute name="script">
@@ -518,4 +518,4 @@ ga('send', 'pageview');
   
 </body>			  
     </jsp:body>
-</x:page>
+</x:base>
