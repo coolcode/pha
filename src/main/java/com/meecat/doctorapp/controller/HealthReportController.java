@@ -15,32 +15,32 @@ import com.meecat.doctorapp.domain.*;
 
 @Controller
 @Transactional
-@RequestMapping("/wiki")
-public class WikiController {
+@RequestMapping("/health-report")
+public class HealthReportController {
 	
-	private static final Logger logger = LoggerFactory.getLogger(WikiController.class); 
+	private static final Logger logger = LoggerFactory.getLogger(HealthReportController.class); 
 
 	@Autowired
 	private UserService userService;
 
 	@Autowired
-	private WikiService wikiService;
+	private HealthReportService hpService;
 
 	@GetMapping("")
 	public String index(Model model) {
-		logger.info("wiki"); 
+		logger.info("health-report"); 
 		model.addAttribute("currentUser", userService.getCurrentUser() );		 
 		
-		return "wiki";
+		return "health-report/health-report";
 	} 	
 
 	@GetMapping("/{id}")
-	public String wiki(@PathVariable("id") int id, Model model) {
-		Wiki wiki = wikiService.getWiki(id);
-		model.addAttribute("wiki", wiki );
+	public String detail(@PathVariable("id") int id, Model model) {
+		HealthReport report = hpService.getHealthReport(id);
+		model.addAttribute("report", report );
 		model.addAttribute("currentUser", userService.getCurrentUser() );
 		
-		return "wiki-detail";
+		return "health-report/health-report-detail";
 	} 
 	
 }

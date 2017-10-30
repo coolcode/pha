@@ -1,26 +1,37 @@
 angular.module('app', ['angular-loading-bar'])
-  .controller('WikiController',['$scope', '$http', function($scope, $http) {
+  .controller('HealthReportController',['$scope', '$http', function($scope, $http) {
 	  $scope.wiki = {};
 	  $scope.wikis = []; 
 	  
 	  $scope.reloadWikis = function(){
 		  $http({
 			  method: 'GET',
-			  url: $.context + '/api/wiki' 
+			  url: $.context + '/api/health-report' 
 			}).then(function successCallback(r) { 
 				 $scope.wiki = {};
 				 $scope.wikis = r.data; 
 			  }, function errorCallback(r) { 
 		   }); 
 	  }
+	    
+	  $scope.reloadUsers = function(){
+		  $http({
+			  method: 'GET',
+			  url:  $.context + '/api/user/simpleUsers' 
+			}).then(function successCallback(r) {  
+				 $scope.userList = r.data;  
+			  }, function errorCallback(r) { 
+		   }); 
+	  }
 	  
 	  $scope.reloadWikis();
+	  $scope.reloadUsers();
 	  
 	  $scope.submitWiki = function(){	
 		  $scope.wiki.content = $('#summernote').summernote('code');
 		  $http({
 			  method: 'POST',
-			  url: $.context + '/api/wiki',
+			  url: $.context + '/api/health-report',
 			  data: $scope.wiki
 			}).then(function successCallback(r) { 
 				 var newwiki= r.data;
@@ -37,10 +48,14 @@ angular.module('app', ['angular-loading-bar'])
 		  $('#summernote').summernote('code', wiki.content);
 	  }
 	  
+	  $scope.addUser = function (user){ 
+		  $scope.wiki.user  = user ; 
+	  }
+	  
 	  $scope.removeWiki = function (wiki){
 		  $http({
 			  method: 'DELETE',
-			  url: $.context + '/api/wiki/'+wiki.id
+			  url: $.context + '/api/health-report/'+wiki.id
 			}).then(function successCallback(r) {  
 				 $scope.reloadWikis();
 			  }, function errorCallback(r) { 
@@ -52,7 +67,7 @@ angular.module('app', ['angular-loading-bar'])
 
 		  $http({
 			  method: 'POST',
-			  url: $.context + '/api/wiki/search',
+			  url: $.context + '/api/health-report/search',
 			  data: $scope.wiki
 			}).then(function successCallback(r) {  
 				 var content = r.data.content;

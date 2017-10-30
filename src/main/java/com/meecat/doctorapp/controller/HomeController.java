@@ -3,6 +3,9 @@ package com.meecat.doctorapp.controller;
 import java.text.DateFormat;
 import java.util.Date;
 import java.util.Locale;
+
+import javax.servlet.http.HttpServletResponse;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,37 +22,43 @@ import com.meecat.doctorapp.service.UserService;
 public class HomeController {
 	
 	@Autowired
-	UserService u;
+	UserService userService;
 	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class); 
 
 	@GetMapping("/")
-	public String home(Locale locale, Model model, @CookieValue(value = "login",
-            defaultValue = "false")
-				 String login) {
-		logger.info("Welcome home! The client locale is {}.", locale);
-		
-		Date date = new Date();
-		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-		
-		String formattedDate = dateFormat.format(date);
-		
-		model.addAttribute("message", formattedDate );
-		
-
-//		u.createDemoPatient();
-		
-		if(!"true".equalsIgnoreCase(login)){
-			//return "redirect:/user/login";
-		}
-		
-		System.out.println("123456");
+	public String home() {
+		logger.info("Welcome home! ");
 		return "home";
 	}
 
 
 	@GetMapping("/login")
-	public String login(){
+	public String login(Model model, 
+			@RequestParam(value = "error", required = false) String error,
+			@RequestParam(value = "logout", required = false) String logout){
+		if (error != null) {
+			model.addAttribute("error", "Invalid username and password!");
+		}
+		if (logout != null) {
+			model.addAttribute("msg", "You've been logged out successfully.");
+		}
 		return "login";		
+	}
+	
+
+	@GetMapping("/facebook_callback")
+	public String facebook_callback(HttpServletResponse response, Model model, 
+			@RequestParam(name = "name") String name,
+			@RequestParam(name = "email") String email, 
+			@RequestParam(name = "id") String id) {
+		logger.info("facebook: {}.", model);
+
+		String pic = "http://graph.facebook.com/" + id + "/picture?type=square";
+		userService.fb(name, email, pic);
+
+		//saveLoginSession(response);
+
+		return "redirect:/";
 	}
 }

@@ -33,6 +33,10 @@ public class UserService {
 		return userRepository.findAll();
 	}
 
+	public List<User> findUsers() {
+		return userRepository.findUsers();
+	}
+	
 	public User getCurrentUser() {
 		String email = SecurityContextHolder.getContext().getAuthentication().getName();
 		return getUserByEmail(email);
